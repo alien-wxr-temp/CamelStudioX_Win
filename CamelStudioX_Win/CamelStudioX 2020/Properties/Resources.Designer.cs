@@ -59,5 +59,15 @@ namespace CamelStudioX_2020.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Close {
+            get {
+                object obj = ResourceManager.GetObject("Close", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
