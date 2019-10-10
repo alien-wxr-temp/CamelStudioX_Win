@@ -5,7 +5,20 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>CamelStudioX_2020</RootNamespace>
     <UseWPF>true</UseWPF>
+    <StartupObject>CamelStudioX_2020.App</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Pic\Close.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Pic\Close.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
