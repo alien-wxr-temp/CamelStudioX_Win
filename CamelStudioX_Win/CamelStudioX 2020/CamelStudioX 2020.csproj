@@ -9,15 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\ico\CamelStudioX.ico" />
     <None Remove="Resources\Pic\Close.png" />
+    <None Remove="Resources\Pic\redClose.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="Resources\ico\CamelStudioX.ico" />
     <Resource Include="Resources\Pic\Close.png" />
+    <Resource Include="Resources\Pic\redClose.png" />
   </ItemGroup>
 
   <ItemGroup>
