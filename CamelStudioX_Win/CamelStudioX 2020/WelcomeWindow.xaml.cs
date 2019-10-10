@@ -31,5 +31,12 @@ namespace CamelStudioX_2020
         {
             this.Close();
         }
+
+        private void newProject_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }
