@@ -7,9 +7,12 @@
         mc:Ignorable="d" Height="450" Width="800"
         WindowState="Normal"
         WindowStyle="None"
+        BorderThickness="1"
+        BorderBrush="#FFCCCEDC"
+        Background="#FFFBFBFB"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="/Resources/ico/camelstudiox.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -35,14 +38,33 @@
             <Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/Resources/Pic/Close.png"/>
             </Button.Background>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border>
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="/Resources/Pic/redClose.png" 
+                                                            Stretch="UniformToFill"/>
+                                            </Border.Background>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
         <Label Name="name"
                Grid.Row="1"
                Grid.Column="1"
-               Content="CamelStudioX 2020"
                FontSize="24"
                HorizontalAlignment="Left"
-               VerticalAlignment="Center"/>
+               VerticalAlignment="Center">CamelStudioX for Windows</Label>
         <Label Name="openRecent"
                Grid.Column="1"
                Grid.Row="2"
@@ -56,7 +78,7 @@
                FontSize="14"
                HorizontalAlignment="Left"
                VerticalAlignment="Center"
-               Margin="10,0,0,0">Get start</Label>
+               Margin="10,0,0,0">Get started</Label>
         <ScrollViewer Name="RecentlyProjectList"
                       Grid.Column="1" 
                       Margin="10,10,10,10" 
@@ -78,19 +100,21 @@
                     Margin="10,10,10,10"
                     BorderThickness="0,0,0,0"
                     FontSize="18"
-                    FontWeight="DemiBold">New Project</Button>
+                    FontWeight="DemiBold"
+                    Background="#FFEEEBEB"
+                    Click="newProject_Click">New Project</Button>
             <Button Name="openProject"
                     Grid.Row="1"
                     Margin="10,10,10,10"
                     BorderThickness="0,0,0,0"
                     FontSize="18"
-                    FontWeight="DemiBold">Open Project</Button>
+                    FontWeight="DemiBold" Background="#FFEEEBEB">Open Project</Button>
             <Button Name="openExample"
                     Grid.Row="2"
                     Margin="10,10,10,10"
                     BorderThickness="0,0,0,0"
                     FontSize="18"
-                    FontWeight="DemiBold">Open Example</Button>
+                    FontWeight="DemiBold" Background="#FFEEEBEB">Open Example</Button>
         </Grid>
     </Grid>
 </Window>
