@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CamelStudioX_2020"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CamelStudioX for Windows"
+        Height="768" Width="1366" 
+        WindowStyle="SingleBorderWindow" 
+        Icon="/Resources/ico/camelstudiox.ico" 
+        ResizeMode="CanResizeWithGrip" 
+        WindowStartupLocation="CenterScreen"
+        Background="#FFFBFBFB">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0"
+              Height="22"
+              VerticalAlignment="Center"
+              Background="#FFFBFBFB">
+            <MenuItem Header=" File "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Edit "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" View "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Build "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Debug "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Tools "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Window "
+                      BorderThickness="0,0,0,0"/>
+            <MenuItem Header=" Help "
+                      BorderThickness="0,0,0,0"/>
+        </Menu>
     </Grid>
 </Window>
