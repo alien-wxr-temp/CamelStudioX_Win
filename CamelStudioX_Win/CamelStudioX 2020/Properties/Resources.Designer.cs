@@ -63,9 +63,29 @@ namespace CamelStudioX_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] CamelStudioX {
+            get {
+                object obj = ResourceManager.GetObject("CamelStudioX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Close {
             get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] redClose {
+            get {
+                object obj = ResourceManager.GetObject("redClose", resourceCulture);
                 return ((byte[])(obj));
             }
         }
