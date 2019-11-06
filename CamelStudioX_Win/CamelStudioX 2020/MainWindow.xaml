@@ -21,21 +21,25 @@
               Height="22"
               VerticalAlignment="Center"
               Background="#FFFBFBFB">
-            <MenuItem Header=" File "
+            <MenuItem Header=" _File "
+                      BorderThickness="0,0,0,0">
+                <MenuItem Header="_New" Height="22"/>
+                <MenuItem Header="_Open" Height="22"/>
+                <MenuItem Header="Open _Recent" Height="22"/>
+            </MenuItem>
+            <MenuItem Header=" _Edit "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Edit "
+            <MenuItem Header=" _View "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" View "
+            <MenuItem Header=" _Build "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Build "
+            <MenuItem Header=" _Debug "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Debug "
+            <MenuItem Header=" _Tools "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Tools "
+            <MenuItem Header=" _Window "
                       BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Window "
-                      BorderThickness="0,0,0,0"/>
-            <MenuItem Header=" Help "
+            <MenuItem Header=" _Help "
                       BorderThickness="0,0,0,0"/>
         </Menu>
     </Grid>
