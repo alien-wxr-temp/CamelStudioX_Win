@@ -23,14 +23,23 @@
               Background="#FFFBFBFB">
             <MenuItem Header=" _File "
                       BorderThickness="0,0,0,0">
-                <MenuItem Header="_New" Height="22"/>
-                <MenuItem Header="_Open" Height="22"/>
-                <MenuItem Header="Open _Recent" Height="22"/>
+                <MenuItem Header="_New" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Open" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="Open _Recent"/>
             </MenuItem>
             <MenuItem Header=" _Edit "
-                      BorderThickness="0,0,0,0"/>
+                      BorderThickness="0,0,0,0">
+                <MenuItem Header="_Undo" InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="_Redo" InputGestureText="Ctrl+Y"/>
+                <Separator/>
+                <MenuItem Header="Cu_t" InputGestureText="Ctrl+X"/>
+                <MenuItem Header="_Copy" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="_Paste" InputGestureText="Ctrl+V"/>
+            </MenuItem>
             <MenuItem Header=" _View "
-                      BorderThickness="0,0,0,0"/>
+                      BorderThickness="0,0,0,0">
+                <MenuItem Header="F_ull Screen" InputGestureText="Shift+Alt+Enter"/>
+            </MenuItem>
             <MenuItem Header=" _Build "
                       BorderThickness="0,0,0,0"/>
             <MenuItem Header=" _Debug "
@@ -42,5 +51,12 @@
             <MenuItem Header=" _Help "
                       BorderThickness="0,0,0,0"/>
         </Menu>
+        <avalonEdit:TextEditor
+            Grid.Row="1"
+            xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+            Name="textEditor"
+            SyntaxHighlighting="C#"
+            FontFamily="Consolas"
+            FontSize="12pt"/>
     </Grid>
 </Window>

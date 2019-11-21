@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\ico\CamelStudioX.ico" />
     <Resource Include="Resources\Pic\Close.png" />
     <Resource Include="Resources\Pic\redClose.png" />
