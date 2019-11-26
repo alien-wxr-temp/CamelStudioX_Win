@@ -9,7 +9,7 @@
         Height="768" Width="1366" 
         WindowStyle="SingleBorderWindow" 
         Icon="/Resources/ico/camelstudiox.ico" 
-        ResizeMode="CanResizeWithGrip" 
+        ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
         Background="#FFFBFBFB">
     <Grid>
