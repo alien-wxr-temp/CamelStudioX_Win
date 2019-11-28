@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <RootNamespace>CamelStudioX_2020</RootNamespace>
     <UseWPF>true</UseWPF>
     <StartupObject>CamelStudioX_2020.App</StartupObject>
@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.0.0" />
+    <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock" Version="3.8.19076.18510" />
   </ItemGroup>
 
   <ItemGroup>
