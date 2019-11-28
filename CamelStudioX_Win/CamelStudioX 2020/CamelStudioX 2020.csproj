@@ -9,9 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Copy.png" />
+    <None Remove="Images\Cut.png" />
+    <None Remove="Images\Delete.png" />
+    <None Remove="Images\Open.png" />
+    <None Remove="Images\Paste.png" />
+    <None Remove="Images\Redo.png" />
+    <None Remove="Images\Save.png" />
+    <None Remove="Images\Undo.png" />
+    <None Remove="Images\WordWrap.png" />
     <None Remove="Resources\ico\CamelStudioX.ico" />
     <None Remove="Resources\Pic\Close.png" />
     <None Remove="Resources\Pic\redClose.png" />
+    <None Remove="CustomHighlighting.xshd" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +30,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\ico\CamelStudioX.ico" />
     <Resource Include="Resources\Pic\Close.png" />
     <Resource Include="Resources\Pic\redClose.png" />
+    <Resource Include="Images\*" />
+    <EmbeddedResource Include="CustomHighlighting.xshd" />
   </ItemGroup>
 
   <ItemGroup>
