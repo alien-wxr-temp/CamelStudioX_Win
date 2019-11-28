@@ -25,7 +25,7 @@ namespace CamelStudioX_2020
         {
             // Load our custom highlighting definition
             IHighlightingDefinition customHighlighting;
-            using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("AvalonEdit.Sample.CustomHighlighting.xshd"))
+            using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("CamelStudioX_2020.CustomHighlighting.xshd"))
             {
                 if (s == null)
                     throw new InvalidOperationException("Could not find embedded resource");
@@ -43,7 +43,7 @@ namespace CamelStudioX_2020
 
             this.SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
 
-            propertyGridComboBox.SelectedIndex = 2;
+            //propertyGridComboBox.SelectedIndex = 2;
 
             //textEditor.TextArea.SelectionBorder = null;
 
@@ -91,24 +91,6 @@ namespace CamelStudioX_2020
                 }
             }
             textEditor.Save(currentFileName);
-        }
-
-        void propertyGridComboBoxSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            if (propertyGrid == null)
-                return;
-            switch (propertyGridComboBox.SelectedIndex)
-            {
-                case 0:
-                    propertyGrid.SelectedObject = textEditor;
-                    break;
-                case 1:
-                    propertyGrid.SelectedObject = textEditor.TextArea;
-                    break;
-                case 2:
-                    propertyGrid.SelectedObject = textEditor.Options;
-                    break;
-            }
         }
 
         CompletionWindow completionWindow;
