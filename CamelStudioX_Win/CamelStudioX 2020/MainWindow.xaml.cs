@@ -43,13 +43,13 @@ namespace CamelStudioX_2020
 
             this.SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
 
-            //propertyGridComboBox.SelectedIndex = 2;
+            propertyGridComboBox.SelectedIndex = 2;
 
             //textEditor.TextArea.SelectionBorder = null;
 
             //textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
             //textEditor.SyntaxHighlighting = customHighlighting;
-            // initial highlighting now set by XAML
+            //initial highlighting now set by XAML
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
@@ -91,6 +91,24 @@ namespace CamelStudioX_2020
                 }
             }
             textEditor.Save(currentFileName);
+        }
+
+        void propertyGridComboBoxSelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (propertyGrid == null)
+                return;
+            switch (propertyGridComboBox.SelectedIndex)
+            {
+                case 0:
+                    propertyGrid.SelectedObject = textEditor;
+                    break;
+                case 1:
+                    propertyGrid.SelectedObject = textEditor.TextArea;
+                    break;
+                case 2:
+                    propertyGrid.SelectedObject = textEditor.Options;
+                    break;
+            }
         }
 
         CompletionWindow completionWindow;
