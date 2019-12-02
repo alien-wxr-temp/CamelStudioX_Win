@@ -39,18 +39,15 @@ namespace CamelStudioX_2020
             // and register it in the HighlightingManager
             HighlightingManager.Instance.RegisterHighlighting("Custom Highlighting", new string[] { ".cool" }, customHighlighting);
 
-
             InitializeComponent();
 
             this.SetValue(TextOptions.TextFormattingModeProperty, TextFormattingMode.Display);
 
-            propertyGridComboBox.SelectedIndex = 2;
+            textEditorPropertyGrid.SelectedObject = textEditor;
+            textAreaPropertyGrid.SelectedObject = textEditor.TextArea;
+            optionsPropertyGrid.SelectedObject = textEditor.Options;
 
-            //textEditor.TextArea.SelectionBorder = null;
-
-            //textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
-            //textEditor.SyntaxHighlighting = customHighlighting;
-            //initial highlighting now set by XAML
+            textEditor.ShowLineNumbers = true;
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
@@ -93,25 +90,7 @@ namespace CamelStudioX_2020
             }
             textEditor.Save(currentFileName);
         }
-
-        void propertyGridComboBoxSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            if (propertyGrid == null)
-                return;
-            switch (propertyGridComboBox.SelectedIndex)
-            {
-                case 0:
-                    propertyGrid.SelectedObject = textEditor;
-                    break;
-                case 1:
-                    propertyGrid.SelectedObject = textEditor.TextArea;
-                    break;
-                case 2:
-                    propertyGrid.SelectedObject = textEditor.Options;
-                    break;
-            }
-        }
-
+        
         CompletionWindow completionWindow;
 
         void textEditor_TextArea_TextEntered(object sender, TextCompositionEventArgs e)
@@ -125,7 +104,7 @@ namespace CamelStudioX_2020
                 data.Add(new MyCompletionData("Item1"));
                 data.Add(new MyCompletionData("Item2"));
                 data.Add(new MyCompletionData("Item3"));
-                data.Add(new MyCompletionData("Another item"));
+                data.Add(new MyCompletionData("h"));
                 completionWindow.Show();
                 completionWindow.Closed += delegate {
                     completionWindow = null;
