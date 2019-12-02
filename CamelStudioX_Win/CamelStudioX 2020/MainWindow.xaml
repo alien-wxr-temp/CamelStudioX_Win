@@ -96,7 +96,7 @@
         </ToolBar>
         <avalon:DockingManager Grid.Row="2" x:Name="dockingManager">
             <avalon:DockingManager.Theme>
-                <avalon:Windows10Theme/>
+                <avalon:MetroTheme/>
             </avalon:DockingManager.Theme>
             <avalon:LayoutRoot>
                 <avalon:LayoutPanel Orientation="Horizontal">
