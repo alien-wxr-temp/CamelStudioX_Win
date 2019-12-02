@@ -1,12 +1,13 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using MahApps.Metro.Controls;
 
 namespace CamelStudioX_2020
 {
     /// <summary>
     /// Interaction logic for WelcomeWindow.xaml
     /// </summary>
-    public partial class WelcomeWindow : Window
+    public partial class WelcomeWindow : MetroWindow
     {
         public WelcomeWindow()
         {

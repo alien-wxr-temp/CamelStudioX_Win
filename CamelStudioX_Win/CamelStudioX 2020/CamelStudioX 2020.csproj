@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.0.0" />
+    <PackageReference Include="MahApps.Metro" Version="1.6.5" />
     <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock" Version="3.8.19076.18510" />
     <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock.Themes" Version="3.8.19076.18510" />
   </ItemGroup>
