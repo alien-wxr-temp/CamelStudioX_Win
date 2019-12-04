@@ -1,20 +1,20 @@
 ﻿<metro:MetroWindow x:Class="CamelStudioX_2020.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CamelStudioX_2020"
-        xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
-	    xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
-        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
-        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-        mc:Ignorable="d"
-        Title="CamelStudioX for Windows"
-        Height="768" Width="1366" 
-        WindowStyle="SingleBorderWindow" 
-        Icon="/Resources/ico/camelstudiox.ico" 
-        ResizeMode="CanResizeWithGrip"
-        WindowStartupLocation="CenterScreen">
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:local="clr-namespace:CamelStudioX_2020"
+                   xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
+	               xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                   xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   mc:Ignorable="d"
+                   Title="CamelStudioX for Windows"
+                   WindowState="Maximized"
+                   WindowStyle="SingleBorderWindow" 
+                   Icon="/Resources/ico/camelstudiox.ico" 
+                   ResizeMode="CanResizeWithGrip"
+                   WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -111,19 +111,25 @@
                     </avalon:LayoutDocumentPane>
                 </avalon:LayoutPanel>
                 <avalon:LayoutRoot.RightSide>
-                    <avalon:LayoutAnchorSide>
+                    <avalon:LayoutAnchorSide >
                         <avalon:LayoutAnchorGroup>
-                            <avalon:LayoutAnchorable Title="TextEditor">
+                            <avalon:LayoutAnchorable AutoHideWidth="270"
+                                                     AutoHideMinWidth="270"
+                                                     Title="TextEditor">
                                 <WindowsFormsHost Name="textEditorPropertyGridHost">
                                     <forms:PropertyGrid x:Name="textEditorPropertyGrid"/>
                                 </WindowsFormsHost>
                             </avalon:LayoutAnchorable>
-                            <avalon:LayoutAnchorable Title="TextArea">
+                            <avalon:LayoutAnchorable AutoHideWidth="270"
+                                                     AutoHideMinWidth="270"
+                                                     Title="TextArea">
                                 <WindowsFormsHost Name="textAreaPropertyGridHost">
                                     <forms:PropertyGrid x:Name="textAreaPropertyGrid"/>
                                 </WindowsFormsHost>
                             </avalon:LayoutAnchorable>
-                            <avalon:LayoutAnchorable Title="Options">
+                            <avalon:LayoutAnchorable AutoHideWidth="270" 
+                                                     AutoHideMinWidth="270"
+                                                     Title="Options">
                                 <WindowsFormsHost Name="optionsPropertyGridHost">
                                     <forms:PropertyGrid x:Name="optionsPropertyGrid"/>
                                 </WindowsFormsHost>
