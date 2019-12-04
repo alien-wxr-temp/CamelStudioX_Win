@@ -61,7 +61,7 @@ namespace CamelStudioX_2020
 
         string currentFileName;
 
-        void openFileClick(object sender, RoutedEventArgs e)
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.CheckFileExists = true;
@@ -73,7 +73,7 @@ namespace CamelStudioX_2020
             }
         }
 
-        void saveFileClick(object sender, EventArgs e)
+        void SaveFile_Click(object sender, EventArgs e)
         {
             if (currentFileName == null)
             {

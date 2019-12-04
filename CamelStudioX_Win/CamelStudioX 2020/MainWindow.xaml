@@ -56,10 +56,11 @@
         </Menu>
         <ToolBar Grid.Row="1"
                  Height="auto">
-            <Button Click="openFileClick">
+            <Button  Name="OpenFile"
+                     Click="OpenFile_Click">
                 <Image Source="Images/Open.png"  Height="16"/>
             </Button>
-            <Button Click="saveFileClick">
+            <Button Click="SaveFile_Click">
                 <Image Source="Images/Save.png"  Height="16"/>
             </Button>
             <Separator/>

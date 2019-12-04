@@ -26,7 +26,12 @@
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.0.0" />
+    <PackageReference Include="FluentWPF" Version="0.8.0" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="2.6.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.0" />
+    <PackageReference Include="Wpf.Themes.ExpressionDark" Version="1.1.0" />
     <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock" Version="3.8.19076.18510" />
     <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock.Themes" Version="3.8.19076.18510" />
   </ItemGroup>
