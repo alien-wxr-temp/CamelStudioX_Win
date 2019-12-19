@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
+using System.Windows;
 using System.Windows.Input;
-using MahApps.Metro.Controls;
 
 namespace CamelStudioX_2020
 {

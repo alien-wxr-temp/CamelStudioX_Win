@@ -1,20 +1,19 @@
-﻿using System;
+﻿using ICSharpCode.AvalonEdit.CodeCompletion;
+using ICSharpCode.AvalonEdit.Folding;
+using ICSharpCode.AvalonEdit.Highlighting;
+using ICSharpCode.AvalonEdit.Search;
+using MahApps.Metro.Controls;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml;
-using System.Windows.Media.Imaging;
-
-using ICSharpCode.AvalonEdit.CodeCompletion;
-using ICSharpCode.AvalonEdit.Folding;
-using ICSharpCode.AvalonEdit.Highlighting;
-using ICSharpCode.AvalonEdit.Search;
-using Microsoft.Win32;
-using MahApps.Metro.Controls;
 
 namespace CamelStudioX_2020
 {
@@ -91,7 +90,7 @@ namespace CamelStudioX_2020
             }
             textEditor.Save(currentFileName);
         }
-        
+
         CompletionWindow completionWindow;
 
         void textEditor_TextArea_TextEntered(object sender, TextCompositionEventArgs e)
@@ -107,7 +106,8 @@ namespace CamelStudioX_2020
                 data.Add(new MyCompletionData("Item3"));
                 data.Add(new MyCompletionData("h"));
                 completionWindow.Show();
-                completionWindow.Closed += delegate {
+                completionWindow.Closed += delegate
+                {
                     completionWindow = null;
                 };
             }
