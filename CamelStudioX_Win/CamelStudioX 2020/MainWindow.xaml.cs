@@ -48,6 +48,7 @@ namespace CamelStudioX_2020
             optionsPropertyGrid.SelectedObject = textEditor.Options;
 
             textEditor.ShowLineNumbers = true;
+            numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/whiteNumbering.png", UriKind.Relative));
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
@@ -197,6 +198,12 @@ namespace CamelStudioX_2020
             {
                 numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/blueNumbering.png", UriKind.Relative));
             }
+        }
+
+        private void NewSerialPort_Click(object sender, RoutedEventArgs e)
+        {
+            SerialPortWindow serialPortWindow = new SerialPortWindow();
+            serialPortWindow.Show();
         }
     }
 }

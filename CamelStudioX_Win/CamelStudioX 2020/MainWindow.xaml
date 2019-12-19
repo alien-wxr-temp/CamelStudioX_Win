@@ -48,7 +48,11 @@
             <MenuItem Header=" _Debug "
                       BorderThickness="0,0,0,0"/>
             <MenuItem Header=" _Tools "
-                      BorderThickness="0,0,0,0"/>
+                      BorderThickness="0,0,0,0">
+                <MenuItem Name="newSerialPort"
+                          Header="_SerialPort"
+                          Click="NewSerialPort_Click"/>
+            </MenuItem>
             <MenuItem Header=" _Window "
                       BorderThickness="0,0,0,0"/>
             <MenuItem Header=" _Help "
@@ -97,7 +101,7 @@
                       IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}"
                       Click="numberingCheckBox_Click">
                 <Image Name="numberingImg"
-                       Source="/Resources/ico/whiteNumbering.png"
+                       Source="/Resources/ico/blueNumbering.png"
                        Height="16"/>
             </CheckBox>
             <ComboBox Name="highlightingComboBox"
