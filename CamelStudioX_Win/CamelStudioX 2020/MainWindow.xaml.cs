@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml;
+using System.Windows.Media.Imaging;
 
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Folding;
@@ -185,5 +186,17 @@ namespace CamelStudioX_2020
             }
         }
         #endregion
+
+        private void numberingCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (textEditor.ShowLineNumbers)
+            {
+                numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/whiteNumbering.png", UriKind.Relative));
+            }
+            else
+            {
+                numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/blueNumbering.png", UriKind.Relative));
+            }
+        }
     }
 }
