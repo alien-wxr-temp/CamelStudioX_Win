@@ -12,7 +12,7 @@
                    Title="CamelStudioX for Windows"
                    WindowState="Maximized"
                    WindowStyle="SingleBorderWindow" 
-                   Icon="/Resources/ico/camelstudiox.ico" 
+                   Icon="/Resources/ico/CamelStudioX.ico" 
                    ResizeMode="CanResizeWithGrip"
                    WindowStartupLocation="CenterScreen">
     <Grid>
@@ -56,36 +56,49 @@
         </Menu>
         <ToolBar Grid.Row="1"
                  Height="auto">
-            <Button  Name="OpenFile"
-                     Click="OpenFile_Click">
-                <Image Source="Images/Open.png"  Height="16"/>
+            <Button Name="openFile"
+                    Click="OpenFile_Click">
+                <Image Source="/Resources/ico/blueOpen.png"
+                       Height="16"/>
             </Button>
-            <Button Click="SaveFile_Click">
-                <Image Source="Images/Save.png"  Height="16"/>
+            <Button Name="saveFile"
+                    Click="SaveFile_Click">
+                <Image Source="/Resources/ico/blueSave.png"
+                       Height="16"/>
             </Button>
             <Separator/>
             <Button Command="Cut">
-                <Image Source="Images/Cut.png"  Height="16"/>
+                <Image Source="/Resources/ico/blueCut.png"
+                       Height="16"/>
             </Button>
             <Button Command="Copy">
-                <Image Source="Images/Copy.png"  Height="16"/>
+                <Image Source="/Resources/ico/blueCopy.png"
+                       Height="16"/>
             </Button>
             <Button Command="Paste">
-                <Image Source="Images/Paste.png"  Height="16"/>
+                <Image Source="/Resources/ico/bluePaste.png"
+                       Height="16"/>
             </Button>
             <Button Command="Delete">
-                <Image Source="Images/Delete.png"  Height="16"/>
+                <Image Source="/Resources/ico/blueDelete.png"
+                       Height="16"/>
             </Button>
             <Separator/>
             <Button Command="Undo">
-                <Image Source="Images/Undo.png"  Height="16"/>
+                <Image Source="/Resources/ico/blueUndo.png"
+                       Height="16"/>
             </Button>
             <Button Command="Redo">
-                <Image Source="Images/Redo.png"  Height="16"/>
+                <Image Source="/Resources/ico/blueRedo.png"
+                       Height="16"/>
             </Button>
             <Separator/>
-            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
-                <Image Source="Images/Numbering.png" Height="16"/>
+            <CheckBox Name="numberingCheckBox"
+                      IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}"
+                      Click="numberingCheckBox_Click">
+                <Image Name="numberingImg"
+                       Source="/Resources/ico/whiteNumbering.png"
+                       Height="16"/>
             </CheckBox>
             <ComboBox Name="highlightingComboBox"
                       SelectedItem="{Binding SyntaxHighlighting, ElementName=textEditor}"

@@ -6,21 +6,12 @@
     <RootNamespace>CamelStudioX_2020</RootNamespace>
     <UseWPF>true</UseWPF>
     <StartupObject>CamelStudioX_2020.App</StartupObject>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Copy.png" />
-    <None Remove="Images\Cut.png" />
-    <None Remove="Images\Delete.png" />
-    <None Remove="Images\Open.png" />
-    <None Remove="Images\Paste.png" />
-    <None Remove="Images\Redo.png" />
-    <None Remove="Images\Save.png" />
-    <None Remove="Images\Undo.png" />
-    <None Remove="Images\Numbering.png" />
-    <None Remove="Resources\ico\CamelStudioX.ico" />
-    <None Remove="Resources\Pic\Close.png" />
-    <None Remove="Resources\Pic\redClose.png" />
+    <None Remove="blueCut.png" />
     <None Remove="CustomHighlighting.xshd" />
   </ItemGroup>
 
@@ -38,10 +29,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\ico\CamelStudioX.ico" />
-    <Resource Include="Resources\Pic\Close.png" />
-    <Resource Include="Resources\Pic\redClose.png" />
-    <Resource Include="Images\*" />
+    <Resource Include="Resources/ico/blueCopy.png" />
+    <Resource Include="Resources/ico/blueCut.png" />
+    <Resource Include="Resources/ico/blueDelete.png" />
+    <Resource Include="Resources/ico/blueNumbering.png" />
+    <Resource Include="Resources/ico/blueOpen.png" />
+    <Resource Include="Resources/ico/bluePaste.png" />
+    <Resource Include="Resources/ico/blueRedo.png" />
+    <Resource Include="Resources/ico/blueSave.png" />
+    <Resource Include="Resources/ico/blueUndo.png" />
+    <Resource Include="Resources/ico/whiteNumbering.png" />
+    <Resource Include="Resources/ico/CamelStudioX.ico" />
     <EmbeddedResource Include="CustomHighlighting.xshd" />
   </ItemGroup>
 
