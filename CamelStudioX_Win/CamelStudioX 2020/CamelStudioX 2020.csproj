@@ -17,7 +17,7 @@
     <None Remove="Images\Redo.png" />
     <None Remove="Images\Save.png" />
     <None Remove="Images\Undo.png" />
-    <None Remove="Images\WordWrap.png" />
+    <None Remove="Images\Numbering.png" />
     <None Remove="Resources\ico\CamelStudioX.ico" />
     <None Remove="Resources\Pic\Close.png" />
     <None Remove="Resources\Pic\redClose.png" />

@@ -84,11 +84,8 @@
                 <Image Source="Images/Redo.png"  Height="16"/>
             </Button>
             <Separator/>
-            <CheckBox IsChecked="{Binding ElementName=textEditor,Path=WordWrap}">
-                <Image Source="Images/WordWrap.png"  Height="16"/>
-            </CheckBox>
             <CheckBox IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
-                <TextBlock Width="16" TextAlignment="Center">#</TextBlock>
+                <Image Source="Images/Numbering.png" Height="16"/>
             </CheckBox>
             <ComboBox Name="highlightingComboBox"
                       SelectedItem="{Binding SyntaxHighlighting, ElementName=textEditor}"
