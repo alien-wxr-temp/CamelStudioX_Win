@@ -8,6 +8,7 @@
 	               xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
                    xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                    mc:Ignorable="d"
                    Title="CamelStudioX for Windows"
                    WindowState="Maximized"
@@ -19,7 +20,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0"
               Height="auto"
@@ -154,5 +156,12 @@
                 </avalon:LayoutRoot.RightSide>
             </avalon:LayoutRoot>
         </avalon:DockingManager>
+        
+        <StatusBar Grid.Row="3">
+            <StatusBarItem>Status</StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+            <StatusBarItem>Selected Tab:</StatusBarItem>
+            <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Header, Mode=OneWay}" />
+        </StatusBar>
     </Grid>
 </metro:MetroWindow>
