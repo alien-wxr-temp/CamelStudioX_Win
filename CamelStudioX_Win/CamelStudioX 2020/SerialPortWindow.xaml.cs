@@ -23,7 +23,7 @@ namespace CamelStudioX_2020
                 cb_SerialPortNumber.SelectedIndex = index; //设置显示的item索引
             }
             bt_send.IsEnabled = false;
-            bt_stopSend.IsEnabled = false;
+            bt_stopReceive.IsEnabled = false;
         }
 
         public SerialPort _serialPort = new SerialPort();
@@ -46,11 +46,7 @@ namespace CamelStudioX_2020
             }
 
         }
-        private void bt_ClearSendData_Click(object sender, RoutedEventArgs e)//清空发送区域
-        {
-            tb_SendData.Text = "";
-        }
-
+  
         private void ClearReceiveData_Click(object sender, RoutedEventArgs e)//清空接受数据
         {
             tb_receiveData.Text = "";
@@ -60,18 +56,18 @@ namespace CamelStudioX_2020
         {
             initialize();//初始化
             string strContent = this.bt_SerialSwitch.Content.ToString();
-            if (strContent == "打开串口")
+            if (strContent == "Open")
             {
                 try
                 {
                     _serialPort.Open();
                     _serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);//添加数据接收事件
                     //_serialPort.DataReceived += DataReceivedHandler;
-                    bt_SerialSwitch.Content = "关闭串口";
-                    tb_switchStatus.Text = "串口为打开状态";
+                    bt_SerialSwitch.Content = "Close";
+                    tb_switchStatus.Text = "Port is Opened";
                     bt_send.IsEnabled = true;
-                    bt_stopSend.IsEnabled = true;
-                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF0000"));
+                    bt_stopReceive.IsEnabled = true;
+                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Red"));
                 }
                 catch { }
             }
@@ -81,11 +77,11 @@ namespace CamelStudioX_2020
                 {
                     _serialPort.DataReceived -= DataReceivedHandler;
                     _serialPort.Close();
-                    bt_SerialSwitch.Content = "打开串口";
-                    tb_switchStatus.Text = "串口为关闭状态";
-                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000000"));
+                    bt_SerialSwitch.Content = "Open";
+                    tb_switchStatus.Text = "Port is Closed";
+                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("LightSeaGreen"));
                     bt_send.IsEnabled = false;
-                    bt_stopSend.IsEnabled = false;
+                    bt_stopReceive.IsEnabled = false;
                 }
                 catch
                 {
@@ -117,22 +113,22 @@ namespace CamelStudioX_2020
             }
             this._serialPort.Write(Data, 0, Data.Length);
         }
-        private void bt_stopSend_Click(object sender, RoutedEventArgs e)//停止接收数据
+        private void bt_stopReceive_Click(object sender, RoutedEventArgs e)//停止接收数据
         {
-            string strContent = this.bt_stopSend.Content.ToString();
-            if (strContent == "停止接收")
+            string strContent = this.bt_stopReceive.Content.ToString();
+            if (strContent == "Stop to Receive")
             {
                 byte[] data = { 0x99 };
                 _serialPort.DataReceived -= DataReceivedHandler;
                 this._serialPort.Write(data, 0, data.Length);
-                bt_stopSend.Content = "继续接收";
+                bt_stopReceive.Content = "Continue to Receive";
             }
             else
             {
                 byte[] data = { 0x66 };
                 this._serialPort.Write(data, 0, data.Length);
                 _serialPort.DataReceived += DataReceivedHandler;
-                bt_stopSend.Content = "停止接收";
+                bt_stopReceive.Content = "Stop to Receive";
             }
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
