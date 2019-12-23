@@ -4,6 +4,8 @@ using System.IO.Ports;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using Microsoft.Win32;
+using System.IO;
 
 namespace CamelStudioX_2020
 {
@@ -138,6 +140,24 @@ namespace CamelStudioX_2020
             {
                 _serialPort.Close();
             }
+        }
+
+        private void SaveReceiveData_Click(object sender, RoutedEventArgs e)
+        {
+            string serialDataFileName;
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.DefaultExt = ".txt";
+            if (dlg.ShowDialog() ?? false)
+            {
+                serialDataFileName = dlg.FileName;
+            }
+            else
+            {
+                return;
+            }
+
+            StreamWriter sw = File.CreateText(serialDataFileName);
+            sw.Write(tb_receiveData.Text);
         }
     }
 }

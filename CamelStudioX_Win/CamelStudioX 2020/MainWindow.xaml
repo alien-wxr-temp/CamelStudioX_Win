@@ -53,7 +53,14 @@
                       BorderThickness="0,0,0,0">
                 <MenuItem Name="newSerialPort"
                           Header="_SerialPort"
-                          Click="NewSerialPort_Click"/>
+                          Click="NewSerialPort_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/ico/SerialPort.png"
+                               Height="18"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header=" _Window "
                       BorderThickness="0,0,0,0"/>

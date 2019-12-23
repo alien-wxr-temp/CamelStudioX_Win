@@ -40,6 +40,8 @@
     <Resource Include="Resources/ico/blueUndo.png" />
     <Resource Include="Resources/ico/whiteNumbering.png" />
     <Resource Include="Resources/ico/CamelStudioX.ico" />
+    <Resource Include="Resources/ico/SerialPort.ico" />
+    <Resource Include="Resources/ico/SerialPort.png" />
     <EmbeddedResource Include="CustomHighlighting.xshd" />
   </ItemGroup>
 
