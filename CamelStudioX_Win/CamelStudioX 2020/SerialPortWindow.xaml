@@ -6,11 +6,14 @@
                    xmlns:local="clr-namespace:CamelStudioX_2020"
                    mc:Ignorable="d"
                    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
-                   Title="Serial Monitor" Height="600" Width="320"
+                   Title="Serial Monitor" Height="600" Width="405"
                    WindowStartupLocation="CenterOwner"
-                   Icon="/Resources/ico/CamelStudioX.ico"
+                   Icon="Resources/ico/SerialPort.ico"
                    Closing="Window_Closing">
     <Grid>
+        <Grid.Resources>
+            <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
@@ -22,15 +25,15 @@
                        Background="GhostWhite"
                        TextWrapping="Wrap"/>
         </ScrollViewer>
-
-        <Controls:MetroAnimatedSingleRowTabControl
+        <TabControl
+            Controls:TabControlHelper.IsUnderlined="True"
             Grid.Row="1"
             TabStripPlacement="Bottom"
             Margin="5,5,5,5"
             BorderBrush="DeepSkyBlue"
             BorderThickness="1">
             <TabItem Header="Upload">
-                <StackPanel>
+                <StackPanel Margin="0,0,0,5">
                     <Label Content="Target Address"
                            FontWeight="Bold"/>
                     <DockPanel>
@@ -53,11 +56,11 @@
                     <Button Style="{StaticResource AccentedSquareButtonStyle}"
                             Content="Load"
                             BorderThickness="0"
-                            Margin="0,5,0,5"/>
+                            Margin="0,5,0,0"/>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Chat">
-                <StackPanel>
+            <TabItem Header="Communicate">
+                <StackPanel Margin="0,0,0,5">
                     <DockPanel>
                         <Button Style="{StaticResource AccentedSquareButtonStyle}"
                                 BorderThickness="0"
@@ -76,18 +79,25 @@
                     <Button Name="ClearReceiveData"
                             Style="{StaticResource AccentedSquareButtonStyle}"
                             BorderThickness="0"
-                            Margin="0,5,0,5"
+                            Margin="0,5,0,0"
                             Content="Clear Received Data"
                             Click="ClearReceiveData_Click"/>
+                    <Button Name="SaveReceiveData"
+                            Style="{StaticResource AccentedSquareButtonStyle}"
+                            BorderThickness="0"
+                            Margin="0,5,0,0"
+                            Content="Save Received Data"
+                            Click="SaveReceiveData_Click"/>
                     <Button Name="bt_stopReceive"
                             Style="{StaticResource AccentedSquareButtonStyle}"
                             BorderThickness="0"
+                            Margin="0,5,0,0"
                             Content="Stop to Receive"
                             Click="bt_stopReceive_Click"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Settings">
-                <StackPanel>
+                <StackPanel Margin="0,0,0,5">
                     <DockPanel>
                         <TextBlock Text="Port:" 
                                    Width="auto"
@@ -172,6 +182,6 @@
                     
                 </StackPanel>
             </TabItem>
-        </Controls:MetroAnimatedSingleRowTabControl>
+        </TabControl>
     </Grid>
 </Controls:MetroWindow>
