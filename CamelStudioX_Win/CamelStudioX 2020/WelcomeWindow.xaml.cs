@@ -14,10 +14,6 @@ namespace CamelStudioX_2020
             InitializeComponent();
         }
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
