@@ -1,11 +1,11 @@
 ﻿using MahApps.Metro.Controls;
+using Microsoft.Win32;
 using System;
+using System.IO;
 using System.IO.Ports;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using Microsoft.Win32;
-using System.IO;
 
 namespace CamelStudioX_2020
 {
@@ -48,7 +48,7 @@ namespace CamelStudioX_2020
             }
 
         }
-  
+
         private void ClearReceiveData_Click(object sender, RoutedEventArgs e)//清空接受数据
         {
             tb_receiveData.Text = "";
@@ -66,7 +66,6 @@ namespace CamelStudioX_2020
                     _serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);//添加数据接收事件
                     //_serialPort.DataReceived += DataReceivedHandler;
                     bt_SerialSwitch.Content = "Close";
-                    tb_switchStatus.Text = "Port is Opened";
                     bt_send.IsEnabled = true;
                     bt_stopReceive.IsEnabled = true;
                     e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Red"));
@@ -80,7 +79,6 @@ namespace CamelStudioX_2020
                     _serialPort.DataReceived -= DataReceivedHandler;
                     _serialPort.Close();
                     bt_SerialSwitch.Content = "Open";
-                    tb_switchStatus.Text = "Port is Closed";
                     e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("LightSeaGreen"));
                     bt_send.IsEnabled = false;
                     bt_stopReceive.IsEnabled = false;

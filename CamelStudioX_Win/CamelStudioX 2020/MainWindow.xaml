@@ -55,10 +55,7 @@
                           Header="_SerialPort"
                           Click="NewSerialPort_Click">
                     <MenuItem.Icon>
-                        <Image Source="/Resources/ico/SerialPort.png"
-                               Height="18"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"/>
+                        <iconPacks:PackIconModern Kind="Usb" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
@@ -71,47 +68,36 @@
                  Height="auto">
             <Button Name="openFile"
                     Click="OpenFile_Click">
-                <Image Source="/Resources/ico/blueOpen.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="FolderOpen" />
             </Button>
             <Button Name="saveFile"
                     Click="SaveFile_Click">
-                <Image Source="/Resources/ico/blueSave.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="Save" />
             </Button>
             <Separator/>
             <Button Command="Cut">
-                <Image Source="/Resources/ico/blueCut.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="Scissor" />
             </Button>
             <Button Command="Copy">
-                <Image Source="/Resources/ico/blueCopy.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="PageCopy" />
             </Button>
             <Button Command="Paste">
-                <Image Source="/Resources/ico/bluePaste.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="ClipboardPaste" />
             </Button>
             <Button Command="Delete">
-                <Image Source="/Resources/ico/blueDelete.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="Delete" />
             </Button>
             <Separator/>
             <Button Command="Undo">
-                <Image Source="/Resources/ico/blueUndo.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="Undo" />
             </Button>
             <Button Command="Redo">
-                <Image Source="/Resources/ico/blueRedo.png"
-                       Height="16"/>
+                <iconPacks:PackIconModern Kind="Redo" />
             </Button>
             <Separator/>
             <CheckBox Name="numberingCheckBox"
-                      IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}"
-                      Click="numberingCheckBox_Click">
-                <Image Name="numberingImg"
-                       Source="/Resources/ico/blueNumbering.png"
-                       Height="16"/>
+                      IsChecked="{Binding ElementName=textEditor,Path=ShowLineNumbers}">
+                <iconPacks:PackIconModern Kind="List" />
             </CheckBox>
             <ComboBox Name="highlightingComboBox"
                       SelectedItem="{Binding SyntaxHighlighting, ElementName=textEditor}"

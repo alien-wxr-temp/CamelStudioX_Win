@@ -16,11 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AvalonEdit" Version="6.0.0" />
+    <PackageReference Include="AvalonEdit" Version="6.0.1" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.7.0" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
-    <PackageReference Include="Wpf.Themes.ExpressionDark" Version="1.1.0" />
-    <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock" Version="3.8.19076.18510" />
-    <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock.Themes" Version="3.8.19076.18510" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="3.0.1" />
   </ItemGroup>
 
   <ItemGroup>
