@@ -3,12 +3,12 @@
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                   xmlns:local="clr-namespace:CamelStudioX_2020"
                    xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
 	               xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
                    xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
                    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                   xmlns:local="clr-namespace:CamelStudioX_2020"
                    mc:Ignorable="d"
                    Title="CamelStudioX for Windows"
                    WindowState="Maximized"
@@ -16,6 +16,10 @@
                    Icon="/Resources/ico/CamelStudioX.ico" 
                    ResizeMode="CanResizeWithGrip"
                    WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.OpenFile" Executed="OpenFile_Click" />
+        <CommandBinding Command="local:CustomCommands.FullScreen" Executed="FullScreen_Click"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -29,21 +33,33 @@
             <MenuItem Header=" _File "
                       BorderThickness="0,0,0,0">
                 <MenuItem Header="_New" InputGestureText="Ctrl+N"/>
-                <MenuItem Header="_Open" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="_Open" 
+                          Command="local:CustomCommands.OpenFile"/>
                 <MenuItem Header="Open _Recent"/>
             </MenuItem>
             <MenuItem Header=" _Edit "
                       BorderThickness="0,0,0,0">
-                <MenuItem Header="_Undo" InputGestureText="Ctrl+Z"/>
-                <MenuItem Header="_Redo" InputGestureText="Ctrl+Y"/>
+                <MenuItem Header="_Undo" 
+                          Command="Undo"
+                          InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="_Redo" 
+                          Command="Redo"
+                          InputGestureText="Ctrl+Y"/>
                 <Separator/>
-                <MenuItem Header="Cu_t" InputGestureText="Ctrl+X"/>
-                <MenuItem Header="_Copy" InputGestureText="Ctrl+C"/>
-                <MenuItem Header="_Paste" InputGestureText="Ctrl+V"/>
+                <MenuItem Header="Cu_t" 
+                          Command="Cut"
+                          InputGestureText="Ctrl+X"/>
+                <MenuItem Header="_Copy"
+                          Command="Copy"
+                          InputGestureText="Ctrl+C"/>
+                <MenuItem Header="_Paste"
+                          Command="Paste"
+                          InputGestureText="Ctrl+V"/>
             </MenuItem>
             <MenuItem Header=" _View "
                       BorderThickness="0,0,0,0">
-                <MenuItem Header="F_ull Screen" InputGestureText="Shift+Alt+Enter"/>
+                <MenuItem Header="F_ull Screen"
+                          Command="local:CustomCommands.FullScreen"/>
             </MenuItem>
             <MenuItem Header=" _Build "
                       BorderThickness="0,0,0,0"/>
@@ -67,7 +83,7 @@
         <ToolBar Grid.Row="1"
                  Height="auto">
             <Button Name="openFile"
-                    Click="OpenFile_Click">
+                    Command="local:CustomCommands.OpenFile">
                 <iconPacks:PackIconModern Kind="FolderOpen" />
             </Button>
             <Button Name="saveFile"
