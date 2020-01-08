@@ -11,7 +11,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml;
 
@@ -20,8 +19,11 @@ namespace CamelStudioX_2020
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : MetroWindow
     {
+
         public MainWindow()
         {
             // Load our custom highlighting definition
@@ -29,7 +31,10 @@ namespace CamelStudioX_2020
             using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream("CamelStudioX_2020.CustomHighlighting.xshd"))
             {
                 if (s == null)
+                {
                     throw new InvalidOperationException("Could not find embedded resource");
+                }
+
                 using (XmlReader reader = new XmlTextReader(s))
                 {
                     customHighlighting = ICSharpCode.AvalonEdit.Highlighting.Xshd.
@@ -48,7 +53,6 @@ namespace CamelStudioX_2020
             optionsPropertyGrid.SelectedObject = textEditor.Options;
 
             textEditor.ShowLineNumbers = true;
-            numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/whiteNumbering.png", UriKind.Relative));
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
@@ -162,7 +166,10 @@ namespace CamelStudioX_2020
             if (foldingStrategy != null)
             {
                 if (foldingManager == null)
+                {
                     foldingManager = FoldingManager.Install(textEditor.TextArea);
+                }
+
                 UpdateFoldings();
             }
             else
@@ -188,22 +195,15 @@ namespace CamelStudioX_2020
         }
         #endregion
 
-        private void numberingCheckBox_Click(object sender, RoutedEventArgs e)
-        {
-            if (textEditor.ShowLineNumbers)
-            {
-                numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/whiteNumbering.png", UriKind.Relative));
-            }
-            else
-            {
-                numberingImg.Source = new BitmapImage(new Uri("/Resources/ico/blueNumbering.png", UriKind.Relative));
-            }
-        }
-
         private void NewSerialPort_Click(object sender, RoutedEventArgs e)
         {
             SerialPortWindow serialPortWindow = new SerialPortWindow();
             serialPortWindow.Show();
+        }
+
+        private void FullScreen_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized;
         }
     }
 }
