@@ -40,7 +40,7 @@
                         <Button Style="{StaticResource AccentedSquareButtonStyle}"
                                 Content="Jump" 
                                 DockPanel.Dock="Right"
-                                BorderThickness="0"/>
+                                BorderThickness="0" Controls:ControlsHelper.ContentCharacterCasing="Upper"/>
                         <TextBox Text="10000000"
                                  FontSize="15"/>
                     </DockPanel>
@@ -50,13 +50,13 @@
                         <Button Style="{StaticResource AccentedSquareButtonStyle}"
                                 Content="Open"
                                 DockPanel.Dock="Right"
-                                BorderThickness="0"/>
+                                BorderThickness="0" Controls:ControlsHelper.ContentCharacterCasing="Upper"/>
                         <TextBox FontSize="15"/>
                     </DockPanel>
                     <Button Style="{StaticResource AccentedSquareButtonStyle}"
                             Content="Load"
                             BorderThickness="0"
-                            Margin="0,5,0,0"/>
+                            Margin="0,5,0,0" Controls:ControlsHelper.ContentCharacterCasing="Upper"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Chat">
@@ -67,7 +67,7 @@
                                 DockPanel.Dock="Right"
                                 Name="bt_send" 
                                 Content="Send"
-                                Click="bt_send_Click"/>
+                                Click="bt_send_Click" Controls:ControlsHelper.ContentCharacterCasing="Normal"/>
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <TextBox Controls:TextBoxHelper.ClearTextButton="True"
                                      Name="tb_SendData"
@@ -81,19 +81,19 @@
                             BorderThickness="0"
                             Margin="0,5,0,0"
                             Content="Clear Received Data"
-                            Click="ClearReceiveData_Click"/>
+                            Click="ClearReceiveData_Click" Controls:ControlsHelper.ContentCharacterCasing="Normal"/>
                     <Button Name="SaveReceiveData"
                             Style="{StaticResource AccentedSquareButtonStyle}"
                             BorderThickness="0"
                             Margin="0,5,0,0"
                             Content="Save Received Data"
-                            Click="SaveReceiveData_Click"/>
+                            Click="SaveReceiveData_Click" Controls:ControlsHelper.ContentCharacterCasing="Normal"/>
                     <Button Name="bt_stopReceive"
                             Style="{StaticResource AccentedSquareButtonStyle}"
                             BorderThickness="0"
                             Margin="0,5,0,0"
                             Content="Stop to Receive"
-                            Click="bt_stopReceive_Click"/>
+                            Click="bt_stopReceive_Click" Controls:ControlsHelper.ContentCharacterCasing="Normal"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Settings">
@@ -115,7 +115,7 @@
                                 BorderThickness="0"
                                 DockPanel.Dock="Right"
                                 Content="Open"
-                                Click="bt_SerialSwitch_Click"/>
+                                Click="bt_SerialSwitch_Click" Controls:ControlsHelper.ContentCharacterCasing="Upper"/>
                         <ComboBox Name="cb_SerialPortNumber"
                                   Width="auto"/>
                     </DockPanel>
