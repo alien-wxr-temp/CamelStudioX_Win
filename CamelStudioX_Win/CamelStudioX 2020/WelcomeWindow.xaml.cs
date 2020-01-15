@@ -1,7 +1,8 @@
 ﻿using MahApps.Metro.Controls;
 using System.Windows;
-using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using System.IO;
+using System;
 
 namespace CamelStudioX_2020
 {
@@ -10,6 +11,7 @@ namespace CamelStudioX_2020
     /// </summary>
     public partial class WelcomeWindow : MetroWindow
     {
+
         public WelcomeWindow()
         {
             InitializeComponent();
@@ -35,7 +37,32 @@ namespace CamelStudioX_2020
 
         private void createButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            //create the project
+            string pPath = pLocation.Text + pName.Text;
+            
+            try
+            {
+                // Determine whether the directory exists.
+                if (!Directory.Exists(pPath))
+                {
+                    // Create the directory it does not exist.
+                    Directory.CreateDirectory(pPath);
+                }
+
+                // Create .icmsx file in the directory.
+                File.CreateText(pPath + @"\" + pName.Text + ".icmsx");
+                // Create .c file in the directory.
+                File.CreateText(pPath + @"\" + pName.Text + ".c");
+
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine("The process failed: {0}", ee.ToString());
+            }
+            finally { }
+
+            //launch the mainWindow
+            MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
             mainWindow.Show();
             this.Close();
         }
@@ -43,11 +70,27 @@ namespace CamelStudioX_2020
         private void openButton_Click(object sender, RoutedEventArgs e)
         {   
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;//设置为选择文件夹
+            dialog.IsFolderPicker = true;
             if(dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 this.pLocation.Text = dialog.FileName;
             }
+        }
+
+        private void openProject_Click(object sender, RoutedEventArgs e)
+        {
+            //launch the mainWindow
+            MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void openExample_Click(object sender, RoutedEventArgs e)
+        {
+            //launch the mainWindow
+            MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

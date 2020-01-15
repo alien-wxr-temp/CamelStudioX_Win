@@ -24,7 +24,7 @@ namespace CamelStudioX_2020
     public partial class MainWindow : MetroWindow
     {
 
-        public MainWindow()
+        public MainWindow(string pName, string pLocation)
         {
             // Load our custom highlighting definition
             IHighlightingDefinition customHighlighting;
@@ -53,6 +53,18 @@ namespace CamelStudioX_2020
             optionsPropertyGrid.SelectedObject = textEditor.Options;
 
             textEditor.ShowLineNumbers = true;
+
+            //
+            textEditor.AppendText("#include \"stdio.h\"\n\n");
+            textEditor.AppendText("//\tThis function is the user interrupt handler.\n");
+            textEditor.AppendText("void user_interrupt(void){}\n\n");
+            textEditor.AppendText("//This function is the main function\n");
+            textEditor.AppendText("int main(){\n");
+            textEditor.AppendText("\twhile(1){\n");
+            textEditor.AppendText("\t\tputs(\"Hello world!\\n\");\n");
+            textEditor.AppendText("\t}\n");
+            textEditor.AppendText("}\n");
+            //
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
