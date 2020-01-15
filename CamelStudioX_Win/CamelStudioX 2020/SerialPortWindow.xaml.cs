@@ -68,7 +68,7 @@ namespace CamelStudioX_2020
                     bt_SerialSwitch.Content = "Close";
                     bt_send.IsEnabled = true;
                     bt_stopReceive.IsEnabled = true;
-                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Red"));
+                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("LightSeaGreen"));
                 }
                 catch { }
             }
@@ -79,7 +79,7 @@ namespace CamelStudioX_2020
                     _serialPort.DataReceived -= DataReceivedHandler;
                     _serialPort.Close();
                     bt_SerialSwitch.Content = "Open";
-                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("LightSeaGreen"));
+                    e_status.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Red"));
                     bt_send.IsEnabled = false;
                     bt_stopReceive.IsEnabled = false;
                 }
