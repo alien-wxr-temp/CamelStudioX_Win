@@ -13,6 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="include\M2.old\**" />
+    <EmbeddedResource Remove="include\M2.old\**" />
+    <None Remove="include\M2.old\**" />
+    <Page Remove="include\M2.old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="blueCut.png" />
     <None Remove="CustomHighlighting.xshd" />
     <None Remove="example\M2\Hello\Hello.c" />
@@ -323,8 +330,75 @@
     <None Remove="include\core\stdio.h" />
     <None Remove="include\core\stdlib.h" />
     <None Remove="include\core\string.h" />
+    <None Remove="include\core\sys\types.h" />
     <None Remove="include\core\time.h" />
     <None Remove="include\core\unistd.h" />
+    <None Remove="include\core\util\atomic.h" />
+    <None Remove="include\core\util\crc16.h" />
+    <None Remove="include\core\util\delay.h" />
+    <None Remove="include\core\util\delay_basic.h" />
+    <None Remove="include\core\util\eu_dst.h" />
+    <None Remove="include\core\util\parity.h" />
+    <None Remove="include\core\util\setbaud.h" />
+    <None Remove="include\core\util\twi.h" />
+    <None Remove="include\core\util\usa_dst.h" />
+    <None Remove="include\M2\AFE.h" />
+    <None Remove="include\M2\CORE.h" />
+    <None Remove="include\M2\EXTIN.h" />
+    <None Remove="include\M2\FLASH.h" />
+    <None Remove="include\M2\LCD.h" />
+    <None Remove="include\M2\MAX3420E.h" />
+    <None Remove="include\M2\mcu.h" />
+    <None Remove="include\M2\MCUIO.h" />
+    <None Remove="include\M2\probe.h" />
+    <None Remove="include\M2\probe_def.h" />
+    <None Remove="include\M2\RTC.h" />
+    <None Remove="include\M2\SPI.h" />
+    <None Remove="include\M2\stddef.h" />
+    <None Remove="include\M2\str.h" />
+    <None Remove="include\M2\string.h" />
+    <None Remove="include\M2\TC0.h" />
+    <None Remove="include\M2\TC1.h" />
+    <None Remove="include\M2\TC2.h" />
+    <None Remove="include\M2\TC4.h" />
+    <None Remove="include\M2\UART.h" />
+    <None Remove="include\M2\WDT.h" />
+    <None Remove="include\M3\mcu.h" />
+    <None Remove="include\M3\mcu.h.bak" />
+    <None Remove="include\M3\MCUIO.h" />
+    <None Remove="include\M3\probe.h" />
+    <None Remove="include\M3\str.h" />
+    <None Remove="include\M3\TC0.h" />
+    <None Remove="include\M3\UART.h" />
+    <None Remove="include\M3\UART1.h" />
+    <None Remove="include\std\stddef.h" />
+    <None Remove="include\std\string.h" />
+    <None Remove="lib\M2\entry.o" />
+    <None Remove="lib\M2\gdbentry.o" />
+    <None Remove="lib\M2\libAFE.a" />
+    <None Remove="lib\M2\libCORE.a" />
+    <None Remove="lib\M2\libgdb.a" />
+    <None Remove="lib\M2\libinterrupt.a" />
+    <None Remove="lib\M2\libLCD.a" />
+    <None Remove="lib\M2\libmsgdb.a" />
+    <None Remove="lib\M2\libmsinterrupt.a" />
+    <None Remove="lib\M2\libRTC.a" />
+    <None Remove="lib\M2\libstr.a" />
+    <None Remove="lib\M2\libstring.a" />
+    <None Remove="lib\M2\libUART.a" />
+    <None Remove="lib\M3\entry.o" />
+    <None Remove="lib\M3\gdbentry.o" />
+    <None Remove="lib\M3\libdsp.a" />
+    <None Remove="lib\M3\libgdb.a" />
+    <None Remove="lib\M3\libinterrupt.a" />
+    <None Remove="lib\M3\libMCUIO.a" />
+    <None Remove="lib\M3\libmsgdb.a" />
+    <None Remove="lib\M3\libmsinterrupt.a" />
+    <None Remove="lib\M3\libstr.a" />
+    <None Remove="lib\M3\libTC0.a" />
+    <None Remove="lib\M3\libUART.a" />
+    <None Remove="lib\M3\libUART1.a" />
+    <None Remove="lib\std\libstring.a" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1243,10 +1317,211 @@
     <Content Include="include\core\string.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="include\core\sys\types.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="include\core\time.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="include\core\unistd.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\atomic.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\crc16.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\delay.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\delay_basic.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\eu_dst.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\parity.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\setbaud.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\twi.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\util\usa_dst.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\AFE.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\CORE.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\EXTIN.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\FLASH.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\LCD.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\MAX3420E.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\mcu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\MCUIO.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\probe.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\probe_def.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\RTC.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\SPI.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\stddef.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\str.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\string.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\TC0.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\TC1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\TC2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\TC4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\UART.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\WDT.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\mcu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\mcu.h.bak">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\MCUIO.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\probe.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\str.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\TC0.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\UART.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M3\UART1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\std\stddef.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\std\string.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\entry.o">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\gdbentry.o">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libAFE.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libCORE.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libgdb.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libinterrupt.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libLCD.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libmsgdb.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libmsinterrupt.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libRTC.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libstr.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libstring.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libUART.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\entry.o">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\gdbentry.o">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libdsp.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libgdb.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libinterrupt.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libMCUIO.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libmsgdb.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libmsinterrupt.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libstr.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libTC0.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libUART.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M3\libUART1.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\std\libstring.a">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -1298,13 +1573,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="lib\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="include\core\compat\deprecated.h" />
-    <Content Include="include\core\compat\ina90.h" />
-    <Content Include="include\core\compat\twi.h" />
+    <Content Include="include\core\compat\deprecated.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\compat\ina90.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\compat\twi.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

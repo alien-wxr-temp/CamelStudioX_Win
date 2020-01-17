@@ -1,8 +1,8 @@
 ﻿using MahApps.Metro.Controls;
-using System.Windows;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using System.IO;
 using System;
+using System.IO;
+using System.Windows;
 
 namespace CamelStudioX_2020
 {
@@ -39,7 +39,7 @@ namespace CamelStudioX_2020
         {
             //create the project
             string pPath = pLocation.Text + pName.Text;
-            
+
             try
             {
                 // Determine whether the directory exists.
@@ -68,10 +68,10 @@ namespace CamelStudioX_2020
         }
 
         private void openButton_Click(object sender, RoutedEventArgs e)
-        {   
+        {
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
             dialog.IsFolderPicker = true;
-            if(dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 this.pLocation.Text = dialog.FileName;
             }
