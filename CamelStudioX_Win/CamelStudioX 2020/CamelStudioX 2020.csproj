@@ -8,15 +8,1252 @@
     <StartupObject>CamelStudioX_2020.App</StartupObject>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <ApplicationIcon>Resources\ico\CamelStudioX.ico</ApplicationIcon>
+    <Win32Resource />
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="blueCut.png" />
     <None Remove="CustomHighlighting.xshd" />
+    <None Remove="example\M2\Hello\Hello.c" />
+    <None Remove="example\M2\Hello\Hello.icmsx" />
+    <None Remove="include\core\alloca.h" />
+    <None Remove="include\core\assert.h" />
+    <None Remove="include\core\avr\boot.h" />
+    <None Remove="include\core\avr\builtins.h" />
+    <None Remove="include\core\avr\common.h" />
+    <None Remove="include\core\avr\cpufunc.h" />
+    <None Remove="include\core\avr\crc16.h" />
+    <None Remove="include\core\avr\delay.h" />
+    <None Remove="include\core\avr\eeprom.h" />
+    <None Remove="include\core\avr\fuse.h" />
+    <None Remove="include\core\avr\interrupt.h" />
+    <None Remove="include\core\avr\io.h" />
+    <None Remove="include\core\avr\io1200.h" />
+    <None Remove="include\core\avr\io2313.h" />
+    <None Remove="include\core\avr\io2323.h" />
+    <None Remove="include\core\avr\io2333.h" />
+    <None Remove="include\core\avr\io2343.h" />
+    <None Remove="include\core\avr\io43u32x.h" />
+    <None Remove="include\core\avr\io43u35x.h" />
+    <None Remove="include\core\avr\io4414.h" />
+    <None Remove="include\core\avr\io4433.h" />
+    <None Remove="include\core\avr\io4434.h" />
+    <None Remove="include\core\avr\io76c711.h" />
+    <None Remove="include\core\avr\io8515.h" />
+    <None Remove="include\core\avr\io8534.h" />
+    <None Remove="include\core\avr\io8535.h" />
+    <None Remove="include\core\avr\io86r401.h" />
+    <None Remove="include\core\avr\io90pwm1.h" />
+    <None Remove="include\core\avr\io90pwm161.h" />
+    <None Remove="include\core\avr\io90pwm216.h" />
+    <None Remove="include\core\avr\io90pwm2b.h" />
+    <None Remove="include\core\avr\io90pwm316.h" />
+    <None Remove="include\core\avr\io90pwm3b.h" />
+    <None Remove="include\core\avr\io90pwm81.h" />
+    <None Remove="include\core\avr\io90pwmx.h" />
+    <None Remove="include\core\avr\io90scr100.h" />
+    <None Remove="include\core\avr\ioa5272.h" />
+    <None Remove="include\core\avr\ioa5505.h" />
+    <None Remove="include\core\avr\ioa5702m322.h" />
+    <None Remove="include\core\avr\ioa5782.h" />
+    <None Remove="include\core\avr\ioa5790.h" />
+    <None Remove="include\core\avr\ioa5790n.h" />
+    <None Remove="include\core\avr\ioa5791.h" />
+    <None Remove="include\core\avr\ioa5795.h" />
+    <None Remove="include\core\avr\ioa5831.h" />
+    <None Remove="include\core\avr\ioa6285.h" />
+    <None Remove="include\core\avr\ioa6286.h" />
+    <None Remove="include\core\avr\ioa6289.h" />
+    <None Remove="include\core\avr\ioa6612c.h" />
+    <None Remove="include\core\avr\ioa6613c.h" />
+    <None Remove="include\core\avr\ioa6614q.h" />
+    <None Remove="include\core\avr\ioa6616c.h" />
+    <None Remove="include\core\avr\ioa6617c.h" />
+    <None Remove="include\core\avr\ioa664251.h" />
+    <None Remove="include\core\avr\ioa8210.h" />
+    <None Remove="include\core\avr\ioa8510.h" />
+    <None Remove="include\core\avr\ioat94k.h" />
+    <None Remove="include\core\avr\iocan128.h" />
+    <None Remove="include\core\avr\iocan32.h" />
+    <None Remove="include\core\avr\iocan64.h" />
+    <None Remove="include\core\avr\iocanxx.h" />
+    <None Remove="include\core\avr\iom103.h" />
+    <None Remove="include\core\avr\iom128.h" />
+    <None Remove="include\core\avr\iom1280.h" />
+    <None Remove="include\core\avr\iom1281.h" />
+    <None Remove="include\core\avr\iom1284.h" />
+    <None Remove="include\core\avr\iom1284p.h" />
+    <None Remove="include\core\avr\iom1284rfr2.h" />
+    <None Remove="include\core\avr\iom128a.h" />
+    <None Remove="include\core\avr\iom128rfa1.h" />
+    <None Remove="include\core\avr\iom128rfr2.h" />
+    <None Remove="include\core\avr\iom16.h" />
+    <None Remove="include\core\avr\iom161.h" />
+    <None Remove="include\core\avr\iom162.h" />
+    <None Remove="include\core\avr\iom163.h" />
+    <None Remove="include\core\avr\iom164.h" />
+    <None Remove="include\core\avr\iom164a.h" />
+    <None Remove="include\core\avr\iom164p.h" />
+    <None Remove="include\core\avr\iom164pa.h" />
+    <None Remove="include\core\avr\iom165.h" />
+    <None Remove="include\core\avr\iom165a.h" />
+    <None Remove="include\core\avr\iom165p.h" />
+    <None Remove="include\core\avr\iom165pa.h" />
+    <None Remove="include\core\avr\iom168.h" />
+    <None Remove="include\core\avr\iom168a.h" />
+    <None Remove="include\core\avr\iom168p.h" />
+    <None Remove="include\core\avr\iom168pa.h" />
+    <None Remove="include\core\avr\iom168pb.h" />
+    <None Remove="include\core\avr\iom169.h" />
+    <None Remove="include\core\avr\iom169a.h" />
+    <None Remove="include\core\avr\iom169p.h" />
+    <None Remove="include\core\avr\iom169pa.h" />
+    <None Remove="include\core\avr\iom16a.h" />
+    <None Remove="include\core\avr\iom16hva.h" />
+    <None Remove="include\core\avr\iom16hva2.h" />
+    <None Remove="include\core\avr\iom16hvb.h" />
+    <None Remove="include\core\avr\iom16hvbrevb.h" />
+    <None Remove="include\core\avr\iom16m1.h" />
+    <None Remove="include\core\avr\iom16u2.h" />
+    <None Remove="include\core\avr\iom16u4.h" />
+    <None Remove="include\core\avr\iom2560.h" />
+    <None Remove="include\core\avr\iom2561.h" />
+    <None Remove="include\core\avr\iom2564rfr2.h" />
+    <None Remove="include\core\avr\iom256rfr2.h" />
+    <None Remove="include\core\avr\iom3000.h" />
+    <None Remove="include\core\avr\iom32.h" />
+    <None Remove="include\core\avr\iom323.h" />
+    <None Remove="include\core\avr\iom324a.h" />
+    <None Remove="include\core\avr\iom324p.h" />
+    <None Remove="include\core\avr\iom324pa.h" />
+    <None Remove="include\core\avr\iom325.h" />
+    <None Remove="include\core\avr\iom3250.h" />
+    <None Remove="include\core\avr\iom3250a.h" />
+    <None Remove="include\core\avr\iom3250p.h" />
+    <None Remove="include\core\avr\iom3250pa.h" />
+    <None Remove="include\core\avr\iom325a.h" />
+    <None Remove="include\core\avr\iom325p.h" />
+    <None Remove="include\core\avr\iom325pa.h" />
+    <None Remove="include\core\avr\iom328.h" />
+    <None Remove="include\core\avr\iom328p.h" />
+    <None Remove="include\core\avr\iom329.h" />
+    <None Remove="include\core\avr\iom3290.h" />
+    <None Remove="include\core\avr\iom3290a.h" />
+    <None Remove="include\core\avr\iom3290pa.h" />
+    <None Remove="include\core\avr\iom329a.h" />
+    <None Remove="include\core\avr\iom329p.h" />
+    <None Remove="include\core\avr\iom329pa.h" />
+    <None Remove="include\core\avr\iom32a.h" />
+    <None Remove="include\core\avr\iom32c1.h" />
+    <None Remove="include\core\avr\iom32hvb.h" />
+    <None Remove="include\core\avr\iom32hvbrevb.h" />
+    <None Remove="include\core\avr\iom32m1.h" />
+    <None Remove="include\core\avr\iom32u2.h" />
+    <None Remove="include\core\avr\iom32u4.h" />
+    <None Remove="include\core\avr\iom32u6.h" />
+    <None Remove="include\core\avr\iom406.h" />
+    <None Remove="include\core\avr\iom48.h" />
+    <None Remove="include\core\avr\iom48a.h" />
+    <None Remove="include\core\avr\iom48p.h" />
+    <None Remove="include\core\avr\iom48pa.h" />
+    <None Remove="include\core\avr\iom48pb.h" />
+    <None Remove="include\core\avr\iom64.h" />
+    <None Remove="include\core\avr\iom640.h" />
+    <None Remove="include\core\avr\iom644.h" />
+    <None Remove="include\core\avr\iom644a.h" />
+    <None Remove="include\core\avr\iom644p.h" />
+    <None Remove="include\core\avr\iom644pa.h" />
+    <None Remove="include\core\avr\iom644rfr2.h" />
+    <None Remove="include\core\avr\iom645.h" />
+    <None Remove="include\core\avr\iom6450.h" />
+    <None Remove="include\core\avr\iom6450a.h" />
+    <None Remove="include\core\avr\iom6450p.h" />
+    <None Remove="include\core\avr\iom645a.h" />
+    <None Remove="include\core\avr\iom645p.h" />
+    <None Remove="include\core\avr\iom649.h" />
+    <None Remove="include\core\avr\iom6490.h" />
+    <None Remove="include\core\avr\iom6490a.h" />
+    <None Remove="include\core\avr\iom6490p.h" />
+    <None Remove="include\core\avr\iom649a.h" />
+    <None Remove="include\core\avr\iom649p.h" />
+    <None Remove="include\core\avr\iom64a.h" />
+    <None Remove="include\core\avr\iom64c1.h" />
+    <None Remove="include\core\avr\iom64hve.h" />
+    <None Remove="include\core\avr\iom64hve2.h" />
+    <None Remove="include\core\avr\iom64m1.h" />
+    <None Remove="include\core\avr\iom64rfr2.h" />
+    <None Remove="include\core\avr\iom8.h" />
+    <None Remove="include\core\avr\iom8515.h" />
+    <None Remove="include\core\avr\iom8535.h" />
+    <None Remove="include\core\avr\iom88.h" />
+    <None Remove="include\core\avr\iom88a.h" />
+    <None Remove="include\core\avr\iom88p.h" />
+    <None Remove="include\core\avr\iom88pa.h" />
+    <None Remove="include\core\avr\iom88pb.h" />
+    <None Remove="include\core\avr\iom8a.h" />
+    <None Remove="include\core\avr\iom8hva.h" />
+    <None Remove="include\core\avr\iom8u2.h" />
+    <None Remove="include\core\avr\iomx8.h" />
+    <None Remove="include\core\avr\iomxx0_1.h" />
+    <None Remove="include\core\avr\iomxx4.h" />
+    <None Remove="include\core\avr\iomxxhva.h" />
+    <None Remove="include\core\avr\iotn10.h" />
+    <None Remove="include\core\avr\iotn11.h" />
+    <None Remove="include\core\avr\iotn12.h" />
+    <None Remove="include\core\avr\iotn13.h" />
+    <None Remove="include\core\avr\iotn13a.h" />
+    <None Remove="include\core\avr\iotn15.h" />
+    <None Remove="include\core\avr\iotn1634.h" />
+    <None Remove="include\core\avr\iotn167.h" />
+    <None Remove="include\core\avr\iotn20.h" />
+    <None Remove="include\core\avr\iotn22.h" />
+    <None Remove="include\core\avr\iotn2313.h" />
+    <None Remove="include\core\avr\iotn2313a.h" />
+    <None Remove="include\core\avr\iotn24.h" />
+    <None Remove="include\core\avr\iotn24a.h" />
+    <None Remove="include\core\avr\iotn25.h" />
+    <None Remove="include\core\avr\iotn26.h" />
+    <None Remove="include\core\avr\iotn261.h" />
+    <None Remove="include\core\avr\iotn261a.h" />
+    <None Remove="include\core\avr\iotn28.h" />
+    <None Remove="include\core\avr\iotn4.h" />
+    <None Remove="include\core\avr\iotn40.h" />
+    <None Remove="include\core\avr\iotn4313.h" />
+    <None Remove="include\core\avr\iotn43u.h" />
+    <None Remove="include\core\avr\iotn44.h" />
+    <None Remove="include\core\avr\iotn441.h" />
+    <None Remove="include\core\avr\iotn44a.h" />
+    <None Remove="include\core\avr\iotn45.h" />
+    <None Remove="include\core\avr\iotn461.h" />
+    <None Remove="include\core\avr\iotn461a.h" />
+    <None Remove="include\core\avr\iotn48.h" />
+    <None Remove="include\core\avr\iotn5.h" />
+    <None Remove="include\core\avr\iotn828.h" />
+    <None Remove="include\core\avr\iotn84.h" />
+    <None Remove="include\core\avr\iotn841.h" />
+    <None Remove="include\core\avr\iotn84a.h" />
+    <None Remove="include\core\avr\iotn85.h" />
+    <None Remove="include\core\avr\iotn861.h" />
+    <None Remove="include\core\avr\iotn861a.h" />
+    <None Remove="include\core\avr\iotn87.h" />
+    <None Remove="include\core\avr\iotn88.h" />
+    <None Remove="include\core\avr\iotn9.h" />
+    <None Remove="include\core\avr\iotnx4.h" />
+    <None Remove="include\core\avr\iotnx5.h" />
+    <None Remove="include\core\avr\iotnx61.h" />
+    <None Remove="include\core\avr\iousb1286.h" />
+    <None Remove="include\core\avr\iousb1287.h" />
+    <None Remove="include\core\avr\iousb162.h" />
+    <None Remove="include\core\avr\iousb646.h" />
+    <None Remove="include\core\avr\iousb647.h" />
+    <None Remove="include\core\avr\iousb82.h" />
+    <None Remove="include\core\avr\iousbxx2.h" />
+    <None Remove="include\core\avr\iousbxx6_7.h" />
+    <None Remove="include\core\avr\iox128a1.h" />
+    <None Remove="include\core\avr\iox128a1u.h" />
+    <None Remove="include\core\avr\iox128a3.h" />
+    <None Remove="include\core\avr\iox128a3u.h" />
+    <None Remove="include\core\avr\iox128a4u.h" />
+    <None Remove="include\core\avr\iox128b1.h" />
+    <None Remove="include\core\avr\iox128b3.h" />
+    <None Remove="include\core\avr\iox128c3.h" />
+    <None Remove="include\core\avr\iox128d3.h" />
+    <None Remove="include\core\avr\iox128d4.h" />
+    <None Remove="include\core\avr\iox16a4.h" />
+    <None Remove="include\core\avr\iox16a4u.h" />
+    <None Remove="include\core\avr\iox16c4.h" />
+    <None Remove="include\core\avr\iox16d4.h" />
+    <None Remove="include\core\avr\iox16e5.h" />
+    <None Remove="include\core\avr\iox192a3.h" />
+    <None Remove="include\core\avr\iox192a3u.h" />
+    <None Remove="include\core\avr\iox192c3.h" />
+    <None Remove="include\core\avr\iox192d3.h" />
+    <None Remove="include\core\avr\iox256a3.h" />
+    <None Remove="include\core\avr\iox256a3b.h" />
+    <None Remove="include\core\avr\iox256a3bu.h" />
+    <None Remove="include\core\avr\iox256a3u.h" />
+    <None Remove="include\core\avr\iox256c3.h" />
+    <None Remove="include\core\avr\iox256d3.h" />
+    <None Remove="include\core\avr\iox32a4.h" />
+    <None Remove="include\core\avr\iox32a4u.h" />
+    <None Remove="include\core\avr\iox32c3.h" />
+    <None Remove="include\core\avr\iox32c4.h" />
+    <None Remove="include\core\avr\iox32d3.h" />
+    <None Remove="include\core\avr\iox32d4.h" />
+    <None Remove="include\core\avr\iox32e5.h" />
+    <None Remove="include\core\avr\iox384c3.h" />
+    <None Remove="include\core\avr\iox384d3.h" />
+    <None Remove="include\core\avr\iox64a1.h" />
+    <None Remove="include\core\avr\iox64a1u.h" />
+    <None Remove="include\core\avr\iox64a3.h" />
+    <None Remove="include\core\avr\iox64a3u.h" />
+    <None Remove="include\core\avr\iox64a4u.h" />
+    <None Remove="include\core\avr\iox64b1.h" />
+    <None Remove="include\core\avr\iox64b3.h" />
+    <None Remove="include\core\avr\iox64c3.h" />
+    <None Remove="include\core\avr\iox64d3.h" />
+    <None Remove="include\core\avr\iox64d4.h" />
+    <None Remove="include\core\avr\iox8e5.h" />
+    <None Remove="include\core\avr\lock.h" />
+    <None Remove="include\core\avr\parity.h" />
+    <None Remove="include\core\avr\pgmspace.h" />
+    <None Remove="include\core\avr\portpins.h" />
+    <None Remove="include\core\avr\power.h" />
+    <None Remove="include\core\avr\sfr_defs.h" />
+    <None Remove="include\core\avr\signal.h" />
+    <None Remove="include\core\avr\signature.h" />
+    <None Remove="include\core\avr\sleep.h" />
+    <None Remove="include\core\avr\version.h" />
+    <None Remove="include\core\avr\wdt.h" />
+    <None Remove="include\core\avr\xmega.h" />
+    <None Remove="include\core\compat\deprecated.h" />
+    <None Remove="include\core\compat\ina90.h" />
+    <None Remove="include\core\compat\twi.h" />
+    <None Remove="include\core\ctype.h" />
+    <None Remove="include\core\errno.h" />
+    <None Remove="include\core\fcntl.h" />
+    <None Remove="include\core\inttypes.h" />
+    <None Remove="include\core\locale.h" />
+    <None Remove="include\core\math.h" />
+    <None Remove="include\core\setjmp.h" />
+    <None Remove="include\core\signal.h" />
+    <None Remove="include\core\stdfix-avrlibc.h" />
+    <None Remove="include\core\stdint.h" />
+    <None Remove="include\core\stdio.h" />
+    <None Remove="include\core\stdlib.h" />
+    <None Remove="include\core\string.h" />
+    <None Remove="include\core\time.h" />
+    <None Remove="include\core\unistd.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="example\M2\Hello\Hello.c">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="example\M2\Hello\Hello.icmsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\alloca.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\assert.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\boot.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\builtins.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\common.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\cpufunc.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\crc16.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\delay.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\eeprom.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\fuse.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\interrupt.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io1200.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io2313.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io2323.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io2333.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io2343.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io43u32x.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io43u35x.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io4414.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io4433.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io4434.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io76c711.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io8515.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io8534.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io8535.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io86r401.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm161.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm216.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm2b.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm316.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm3b.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwm81.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90pwmx.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\io90scr100.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5272.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5505.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5702m322.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5782.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5790.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5790n.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5791.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5795.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa5831.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6285.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6286.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6289.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6612c.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6613c.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6614q.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6616c.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa6617c.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa664251.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa8210.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioa8510.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\ioat94k.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iocan128.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iocan32.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iocan64.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iocanxx.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom103.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom128.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom1280.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom1281.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom1284.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom1284p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom1284rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom128a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom128rfa1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom128rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom161.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom162.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom163.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom164.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom164a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom164p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom164pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom165.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom165a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom165p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom165pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom168.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom168a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom168p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom168pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom168pb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom169.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom169a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom169p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom169pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16hva.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16hva2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16hvb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16hvbrevb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16m1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16u2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom16u4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom2560.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom2561.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom2564rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom256rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3000.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom323.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom324a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom324p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom324pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom325.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3250.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3250a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3250p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3250pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom325a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom325p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom325pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom328.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom328p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom329.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3290.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3290a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom3290pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom329a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom329p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom329pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32c1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32hvb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32hvbrevb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32m1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32u2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32u4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom32u6.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom406.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom48.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom48a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom48p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom48pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom48pb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom640.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom644.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom644a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom644p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom644pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom644rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom645.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6450.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6450a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6450p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom645a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom645p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom649.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6490.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6490a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom6490p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom649a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom649p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64c1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64hve.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64hve2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64m1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom64rfr2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8515.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8535.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom88.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom88a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom88p.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom88pa.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom88pb.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8hva.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iom8u2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iomx8.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iomxx0_1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iomxx4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iomxxhva.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn10.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn11.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn12.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn13.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn13a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn15.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn1634.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn167.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn20.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn22.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn2313.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn2313a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn24.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn24a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn25.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn26.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn261.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn261a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn28.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn40.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn4313.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn43u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn44.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn441.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn44a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn45.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn461.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn461a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn48.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn5.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn828.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn84.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn841.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn84a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn85.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn861.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn861a.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn87.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn88.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotn9.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotnx4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotnx5.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iotnx61.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb1286.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb1287.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb162.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb646.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb647.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousb82.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousbxx2.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iousbxx6_7.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128a1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128a1u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128a3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128a3u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128a4u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128b1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128b3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox128d4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox16a4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox16a4u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox16c4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox16d4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox16e5.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox192a3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox192a3u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox192c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox192d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256a3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256a3b.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256a3bu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256a3u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox256d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32a4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32a4u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32c4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32d4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox32e5.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox384c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox384d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64a1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64a1u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64a3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64a3u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64a4u.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64b1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64b3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64c3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64d3.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox64d4.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\iox8e5.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\lock.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\parity.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\pgmspace.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\portpins.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\power.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\sfr_defs.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\signal.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\signature.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\sleep.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\version.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\wdt.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\avr\xmega.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\ctype.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\errno.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\fcntl.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\inttypes.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\locale.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\math.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\setjmp.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\signal.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\stdfix-avrlibc.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\stdint.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\stdio.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\stdlib.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\string.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\time.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\core\unistd.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.0.1" />
+    <PackageReference Include="Dirkster.AvalonDock.Themes.VS2013" Version="3.6.2" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="3.7.0" />
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="3.1.0" />
@@ -58,6 +1295,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="include\core\compat\deprecated.h" />
+    <Content Include="include\core\compat\ina90.h" />
+    <Content Include="include\core\compat\twi.h" />
   </ItemGroup>
 
 </Project>
