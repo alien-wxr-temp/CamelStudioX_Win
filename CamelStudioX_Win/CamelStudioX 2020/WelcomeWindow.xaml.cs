@@ -50,9 +50,9 @@ namespace CamelStudioX_2020
                 }
 
                 // Create .icmsx file in the directory.
-                File.CreateText(pPath + @"\" + pName.Text + ".icmsx");
+                File.CreateText(pPath + @"\" + pName.Text + ".icmsx").Dispose();
                 // Create .c file in the directory.
-                File.CreateText(pPath + @"\" + pName.Text + ".c");
+                File.CreateText(pPath + @"\" + pName.Text + ".c").Dispose();
 
             }
             catch (Exception ee)
