@@ -6,13 +6,16 @@ using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml;
+using Xceed.Wpf.AvalonDock.Layout;
 
 namespace CamelStudioX_2020
 {
@@ -52,7 +55,14 @@ namespace CamelStudioX_2020
             textAreaPropertyGrid.SelectedObject = textEditor.TextArea;
             optionsPropertyGrid.SelectedObject = textEditor.Options;
 
+            string currentFileName = pLocation + pName + @"\" + pName + ".c";
             textEditor.ShowLineNumbers = true;
+            if (pName != "")
+            {
+                textEditor.Load(currentFileName);
+            }
+
+            layoutAnchorable1.Title = pName;
 
             //
             textEditor.AppendText("#include \"stdio.h\"\n\n");
@@ -65,6 +75,8 @@ namespace CamelStudioX_2020
             textEditor.AppendText("\t}\n");
             textEditor.AppendText("}\n");
             //
+
+            textEditor.Save(currentFileName);
 
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
@@ -84,9 +96,40 @@ namespace CamelStudioX_2020
             dlg.CheckFileExists = true;
             if (dlg.ShowDialog() ?? false)
             {
-                currentFileName = dlg.FileName;
-                textEditor.Load(currentFileName);
-                textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(Path.GetExtension(currentFileName));
+                var firstDocumentPane = dockingManager.Layout.Descendents().OfType<LayoutDocumentPane>().FirstOrDefault();
+                if (firstDocumentPane != null)
+                {
+                    ICSharpCode.AvalonEdit.TextEditor textEditor2 = new ICSharpCode.AvalonEdit.TextEditor();
+                    textEditor2.FontSize = 14;
+
+                    LayoutAnchorable layoutAnchorable2 = new LayoutAnchorable();
+                    layoutAnchorable2.Content = textEditor2;
+                    layoutAnchorable2.Title = dlg.FileName;
+                    layoutAnchorable2.Closing += Tab_Close;
+                    layoutAnchorable2.IsActive = true;
+                    firstDocumentPane.Children.Add(layoutAnchorable2);
+
+                    currentFileName = dlg.FileName;
+                    textEditor2.Load(currentFileName);
+                    textEditor2.ShowLineNumbers = true;
+                    textEditor2.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(Path.GetExtension(currentFileName));
+                }
+            }
+        }
+
+
+        private void Tab_Close(object sender, CancelEventArgs e)
+        {
+            if (true)
+            {
+                if (MessageBox.Show("还没有保存，是否要退出？", "提示", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
 

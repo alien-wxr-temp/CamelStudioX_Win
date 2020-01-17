@@ -127,7 +127,8 @@
             <avalon:LayoutRoot>
                 <avalon:LayoutPanel Orientation="Horizontal">
                     <avalon:LayoutDocumentPane>
-                        <avalon:LayoutAnchorable Title="Coder">
+                        <avalon:LayoutAnchorable Title="Coder"
+                                                 x:Name="layoutAnchorable1">
                             <avalonEdit:TextEditor Grid.Column="0" 
                                                    Name="textEditor"
                                                    FontFamily="Consolas"
