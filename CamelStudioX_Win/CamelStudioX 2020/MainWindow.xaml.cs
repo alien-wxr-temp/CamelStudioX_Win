@@ -64,20 +64,6 @@ namespace CamelStudioX_2020
 
             layoutAnchorable1.Title = pName;
 
-            //
-            textEditor.AppendText("#include \"stdio.h\"\n\n");
-            textEditor.AppendText("//\tThis function is the user interrupt handler.\n");
-            textEditor.AppendText("void user_interrupt(void){}\n\n");
-            textEditor.AppendText("//This function is the main function\n");
-            textEditor.AppendText("int main(){\n");
-            textEditor.AppendText("\twhile(1){\n");
-            textEditor.AppendText("\t\tputs(\"Hello world!\\n\");\n");
-            textEditor.AppendText("\t}\n");
-            textEditor.AppendText("}\n");
-            //
-
-            textEditor.Save(currentFileName);
-
             textEditor.TextArea.TextEntering += textEditor_TextArea_TextEntering;
             textEditor.TextArea.TextEntered += textEditor_TextArea_TextEntered;
             SearchPanel.Install(textEditor);

@@ -38,28 +38,27 @@ namespace CamelStudioX_2020
         private void createButton_Click(object sender, RoutedEventArgs e)
         {
             //create the project
-            string pPath = pLocation.Text + pName.Text;
+            string sourceDir = @"example\M2\Hello";
+            string targetDir = pLocation.Text + pName.Text;
 
             try
             {
                 // Determine whether the directory exists.
-                if (!Directory.Exists(pPath))
+                if (!Directory.Exists(targetDir))
                 {
                     // Create the directory it does not exist.
-                    Directory.CreateDirectory(pPath);
+                    Directory.CreateDirectory(targetDir);
                 }
 
-                // Create .icmsx file in the directory.
-                File.CreateText(pPath + @"\" + pName.Text + ".icmsx").Dispose();
-                // Create .c file in the directory.
-                File.CreateText(pPath + @"\" + pName.Text + ".c").Dispose();
-
+                // create .c & .icmsx file
+                File.Copy(Path.Combine(sourceDir, "Hello.c"), Path.Combine(targetDir, pName.Text + ".c"));
+                File.Copy(Path.Combine(sourceDir, "Hello.icmsx"), Path.Combine(targetDir, pName.Text + ".icmsx"));
             }
-            catch (Exception ee)
+            // Catch exception if the file was already copied.
+            catch (IOException copyError)
             {
-                Console.WriteLine("The process failed: {0}", ee.ToString());
+                Console.WriteLine(copyError.Message);
             }
-            finally { }
 
             //launch the mainWindow
             MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
