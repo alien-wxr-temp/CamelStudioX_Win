@@ -38,6 +38,7 @@
 #define RT_UART_Busy()	(*(volatile unsigned *)UART_BUSY)
 #define RT_UART_DataRdy() 	(*(volatile unsigned int*)uart_rdy_port)
 #define RT_UART_Read()	(*(volatile unsigned*)uart_rport)
+#define RT_UART_IntEn() {MemoryOr32(UART_CTL, 1); RT_SYS_IntEn();}
 void RT_UART_WriteChar(unsigned char value);
 void RT_UART_WriteShort(unsigned short value);
 void RT_UART_WriteLong(unsigned long value);

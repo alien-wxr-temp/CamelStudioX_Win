@@ -45,7 +45,8 @@
 #define RT_T1_Set1u(n, irq)	{MemoryAnd32(T1_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T1_CLK_REG, 3);	\
 	MemoryWrite32(T1_REF_REG, n);	\
-	MemoryOr32(T1_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T1_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 //********************************************************//
 // void RT_T1_Set100u(int n£¬ int irq)                    //
@@ -58,7 +59,21 @@
 #define RT_T1_Set100u(n, irq)	{MemoryAnd32(T1_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T1_CLK_REG, 0xff);	\
 	MemoryWrite32(T1_REF_REG, n);		\
-	MemoryOr32(T1_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T1_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
+
+//********************************************************//
+// void RT_T1_SetFreqCtr(int n)                    //
+// Description:                                           //
+// This function set the frequency counter of tc1         //
+// The base frequency of the counter is 45hz, 		  //
+// "n" is times of 45hz               			  //
+//********************************************************//
+
+#define RT_T1_SetCtr(n)	{MemoryAnd32(T1_CTL0_REG, ~(1<<7)); 	\
+	MemoryWrite32(T1_CLK_REG, n);	\
+	MemoryWrite32(T1_REF_REG, 0x0);		\
+	MemoryOr32(T1_CTL0_REG, (0x02));}
 
 
 /*********** Timer1 cnt End***************/
@@ -91,7 +106,8 @@
 
 #define RT_T1_Ecnt(n,pos, irq)	{MemoryAnd32(T1_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
 	MemoryOr32(T1_CTL0_REG, ((pos << 2) | (irq << 7)|0x1));	\
-	MemoryWrite32(T1_REF_REG, n);}
+	MemoryWrite32(T1_REF_REG, n); \
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 /*********** Timer1 ECM End***************/
 
@@ -107,7 +123,8 @@
 //********************************************************//
 
 #define RT_T1_PulseWidth(rise, irq)	{MemoryAnd32(T1_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
-	MemoryOr32(T1_CTL0_REG, (0x8 | (irq << 7) | (rise << 2)));}  
+	MemoryOr32(T1_CTL0_REG, (0x18 | (irq << 7) | (rise << 2))); \
+	MemoryOr32(SYS_CTL0_REG, irq);}  
 
 #define RT_T1_ReadCnt() 	MemoryRead32(T1_READ_REG)
 /*********** Timer1 PWMM End***************/

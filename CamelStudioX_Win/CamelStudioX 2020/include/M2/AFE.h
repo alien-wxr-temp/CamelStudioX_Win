@@ -69,6 +69,12 @@
 //set the resistor for v2p, 0 -> 220k, 1 -> 256k, 2 -> 291k, 3 -> 185k
 #define RT_V2P_SetV2PRes(res) 	{MemoryAnd32(AD_CTL0_REG, ~(0x3<<9)); 	\
 	MemoryOr32(AD_CTL0_REG, (res<<9));}
+	
+// clear AD result
+#define RT_ADC_Clr()	{MemoryWrite32(AD_CLR_REG, 1);}
+
+// start ADC accumulate
+#define RT_ADC_Start()	{MemoryWrite32(AD_READ_REG, 1);}
 /***** End of OPO and ADC setup *****/
 int RT_ADC_Read();
 int RT_V2P_Read();

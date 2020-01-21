@@ -53,8 +53,8 @@
 	MemoryWrite32(T4_REF0_REG, ref0);	\
 	MemoryWrite32(T4_CLK1_REG, div1);	\
 	MemoryWrite32(T4_REF1_REG, ref1);	\
-	MemoryAnd32(T4_CTL0_REG, ~(0x3));	\ 
-	MemoryOr32(T4_CTL0_REG, (pwm0_en + pwm1_en<<1));}
+	MemoryAnd32(T4_CTL0_REG, ~(0x3));   \
+	MemoryOr32(T4_CTL0_REG, (pwm0_en | pwm1_en<<1));}
 /*********** Timer4 PWM End***************/
 
 #endif //__T4_H__

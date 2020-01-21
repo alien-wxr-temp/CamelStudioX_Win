@@ -46,7 +46,8 @@
 #define RT_T0_Set1u(n, irq)	{MemoryAnd32(T0_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T0_CLK_REG, 3);	\
 	MemoryWrite32(T0_REF_REG, n);	\
-	MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 //********************************************************//
 // void RT_T0_Set100u(int n£¬ int irq)                    //
@@ -59,7 +60,21 @@
 #define RT_T0_Set100u(n, irq)	{MemoryAnd32(T0_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T0_CLK_REG, 0xff);	\
 	MemoryWrite32(T0_REF_REG, n);		\
-	MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T0_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
+
+//********************************************************//
+// void RT_T0_SetFreqCtr(int n)                    //
+// Description:                                           //
+// This function set the frequency counter of tc0         //
+// The base frequency of the counter is 45hz, 		  //
+// "n" is times of 45hz               			  //
+//********************************************************//
+
+#define RT_T0_SetCtr(n)	{MemoryAnd32(T0_CTL0_REG, ~(1<<7)); 	\
+	MemoryWrite32(T0_CLK_REG, n);	\
+	MemoryWrite32(T0_REF_REG, 0x0);		\
+	MemoryOr32(T0_CTL0_REG, (0x02));}
 
 /*********** Timer0 cnt End***************/
 
@@ -91,7 +106,8 @@
 
 #define RT_T0_Ecnt(n,pos, irq)	{MemoryAnd32(T0_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
 	MemoryOr32(T0_CTL0_REG, ((pos << 2) | (irq << 7)|0x1));	\
-	MemoryWrite32(T0_REF_REG, n);}
+	MemoryWrite32(T0_REF_REG, n); \
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 /*********** Timer0 ECM End***************/
 
@@ -107,7 +123,8 @@
 //********************************************************//
 
 #define RT_T0_PulseWidth(rise, irq)	{MemoryAnd32(T0_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
-	MemoryOr32(T0_CTL0_REG, (0x8 | (irq << 7) | (rise << 2)));}  
+	MemoryOr32(T0_CTL0_REG, (0x18 | (irq << 7) | (rise << 2))); \
+	MemoryOr32(SYS_CTL0_REG, irq);}  
 
 #define RT_T0_ReadCnt() 	MemoryRead32(T0_READ_REG)
 

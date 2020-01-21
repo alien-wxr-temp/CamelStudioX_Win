@@ -36,8 +36,10 @@
 // reset: reset the system						          //
 //********************************************************//
 
-#define RT_WDT_Set(n, irq, rst) 	MemoryWrite32(WDT_CTL0_REG, (n<<4 | irq<<2 | rst<<1))
+#define RT_WDT_Set(n, irq, rst) 	{MemoryWrite32(WDT_CTL0_REG, (n<<4 | irq<<2 | rst<<1 | 1));	\
+										MemoryOr32(SYS_CTL0_REG, irq);}
 #define RT_WDT_Clr()				MemoryWrite32(WDT_CLR_REG, 1)
+#define RT_WDT_ReadCnt() 			MemoryRead32(WDT_READ_REG)
 /**************** WDT End****************/
 
 #endif //__WDT_H__

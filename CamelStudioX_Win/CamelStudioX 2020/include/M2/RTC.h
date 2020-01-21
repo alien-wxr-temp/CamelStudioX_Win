@@ -27,7 +27,7 @@
 #define RTC_CLR_REG       0x1f800f03
 #define RT_RTC_Init12() 	{MemoryWrite32(RTC_CTL_REG,0x00000001); MemoryWrite32(RTC_TIME_REG,0x00420000);}
 #define RT_RTC_Init24() 	{MemoryWrite32(RTC_CTL_REG,0x00000003); MemoryWrite32(RTC_TIME_REG,0x00420000);}
-#define RT_RTC_Set(year, mon, day, hour, min, sec) MemoryWrite32(RTC_TIME_REG, year<<26+mon<<22+day<<17+hour<<12+min<<6+sec)
+#define RT_RTC_Set(year, mon, day, hour, min, sec) MemoryWrite32(RTC_TIME_REG, year<<26|mon<<22|day<<17|hour<<12|min<<6|sec)
 #define RT_RTC_Read32() 	MemoryRead32(RTC_TIME_REG)
 
 extern void RT_RTC_Read(unsigned char *d_year,unsigned char *d_mon,unsigned char *d_day,unsigned char *d_hour,unsigned char *d_min,unsigned char *d_sec);

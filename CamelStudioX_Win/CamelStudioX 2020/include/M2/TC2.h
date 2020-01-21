@@ -31,7 +31,7 @@
 
 /***** Timer clr stop and flag Setup******/
 #define RT_T2_Stop()		MemoryWrite32(T2_CTL0_REG, 0)
-#define RT_T2_Clr()		{MemoryWrite32(T2_CLRIRQ_REG, 0); MemoryWrite32(T1_CLRCNT_REG, 0);}
+#define RT_T2_Clr()		{MemoryWrite32(T2_CLRIRQ_REG, 0); MemoryWrite32(T2_CLRCNT_REG, 0);}
 #define RT_T2_SetIRQ(state)	MemoryWrite32(T2_CLRIRQ_REG, state)
 #define RT_T2_Flag() 		((MemoryRead32(T2_CTL0_REG)&0x80000000)>>31)
 /****************** end*******************/
@@ -48,7 +48,8 @@
 #define RT_T2_Set1u(n, irq)	{MemoryAnd32(T2_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T2_CLK_REG, 3);	\
 	MemoryWrite32(T2_REF_REG, n);	\
-	MemoryOr32(T2_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T2_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 //********************************************************//
 // void RT_T2_Set100u(int n£¬ int irq)                    //
@@ -61,7 +62,21 @@
 #define RT_T2_Set100u(n, irq)	{MemoryAnd32(T2_CTL0_REG, ~(1<<7)); 	\
 	MemoryWrite32(T2_CLK_REG, 0xff);	\
 	MemoryWrite32(T2_REF_REG, n);		\
-	MemoryOr32(T2_CTL0_REG, (0x02 | (irq << 7)));}
+	MemoryOr32(T2_CTL0_REG, (0x02 | (irq << 7)));	\
+	MemoryOr32(SYS_CTL0_REG, irq);}
+
+//********************************************************//
+// void RT_T2_SetCtr(int n)                    //
+// Description:                                           //
+// This function set the frequency counter of tc2         //
+// The base frequency of the counter is 45hz, 		  //
+// "n" is times of 45hz               			  //
+//********************************************************//
+
+#define RT_T2_SetCtr(n)	{MemoryAnd32(T2_CTL0_REG, ~(1<<7)); 	\
+	MemoryWrite32(T2_CLK_REG, n);	\
+	MemoryWrite32(T2_REF_REG, 0x0);		\
+	MemoryOr32(T2_CTL0_REG, (0x02));}
 
 /************Timer2 cnt End***************/
 
@@ -85,10 +100,10 @@
 // pwm13: 1 -- enable PWM1-3,  0 --- disable PWM1-3                 // 
 //******************************************************************//
 
-#define RT_T2_PWM(div, ref, phase0, phase1, phase2, phase3, pwm0, pwm13)  	{MemoryAnd32(T2_CTL0_REG, ~(0x3<<4)); 	\
+#define RT_T2_PWM(div, ref0, ref1, ref2, ref3, phase0, phase1, phase2, phase3, pwm0, pwm13)  	{MemoryAnd32(T2_CTL0_REG, ~(0x3<<4)); 	\
 	  MemoryOr32(T2_CTL0_REG, ((pwm0 << 4) | (pwm13 <<5)));	\
         MemoryWrite32(T2_CLK_REG, div);	\
-        MemoryWrite32(T2_REF_REG, ref);	\
+        MemoryWrite32(T2_REF_REG, (ref0 + (ref1<<8) + (ref2<<16) + (ref3<<24)));	\
         MemoryWrite32(T2_PHASE_REG, (phase0 + (phase1<<8) + (phase2<<16) + (phase3<<24)));}
 
 /*********** Timer2 PWM End***************/
@@ -104,7 +119,8 @@
 
 #define RT_T2_Ecnt(n,pos, irq)	{MemoryAnd32(T2_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
 	MemoryOr32(T2_CTL0_REG, ((pos << 2) | (irq << 7)|0x1));	\
-	MemoryWrite32(T2_REF_REG, n);}
+	MemoryWrite32(T2_REF_REG, n); \
+	MemoryOr32(SYS_CTL0_REG, irq);}
 
 /*********** Timer2 ECM End***************/
 
@@ -120,7 +136,8 @@
 //********************************************************//
 
 #define RT_T2_PulseWidth(rise, irq)	{MemoryAnd32(T2_CTL0_REG, ~((0x1<<7)+(0x1<<2))); 	\
-	MemoryOr32(T2_CTL0_REG, (0x8 | (irq << 7) | (rise << 2)));}  
+	MemoryOr32(T2_CTL0_REG, (0x18 | (irq << 7) | (rise << 2))); \
+	MemoryOr32(SYS_CTL0_REG, irq);}  
 
 #define RT_T2_ReadCnt() 	MemoryRead32(T2_READ_REG)
 /*********** Timer2 PWMM End***************/

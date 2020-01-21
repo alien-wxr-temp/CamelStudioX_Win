@@ -32,6 +32,9 @@
 #define WRITE_ACK 0x6
 #define DATA_START 0x2
 #define DATA_END 0x3
+//LOAD_START indicate code upload start for uart upload using flash space code
+#define LOAD_START 0x4
+#define LOAD_END   0x7
 #define MASTER_ID 0x20
 #define STUDIO_ID 0x20
 #define BROADCAST_ID 0x20
@@ -72,17 +75,17 @@
 
 
 
-//#define MemoryRead8(A) (*(volatile char*)(A))
-//#define MemoryRead16(A) (*(volatile unsigned short*)(A))
+#define MemoryRead8(A) (*(volatile char*)(A))
+#define MemoryRead16(A) (*(volatile unsigned short*)(A))
 #define MemoryRead(A) (*(volatile unsigned int*)(A))
 #define MemoryRead32(A) (*(volatile unsigned long*)(A))
-//#define MemoryWrite8(A,V) *(volatile char*)(A)=(V)
-//#define MemoryWrite16(A,V) *(volatile unsigned short*)(A)=(V)
+#define MemoryWrite8(A,V) *(volatile char*)(A)=(V)
+#define MemoryWrite16(A,V) *(volatile unsigned short*)(A)=(V)
 #define MemoryWrite(A,V) *(volatile unsigned int*)(A)=(V)
 #define MemoryWrite32(A,V) *(volatile unsigned long*)(A)=(V)
 
 //#define MemoryOr8(A,V) (*(volatile char*)(A)|=(V))
-//#define MemoryOr16(A,V) (*(volatile unsigned short*)(A)|=(V))
+#define MemoryOr16(A,V) (*(volatile unsigned short*)(A)|=(V))
 #define MemoryOr(A,V) (*(volatile unsigned int*)(A)|=(V))
 #define MemoryOr32(A,V) (*(volatile unsigned long*)(A)|=(V))
 
@@ -92,6 +95,7 @@
 #define MemoryAnd32(A,V) (*(volatile unsigned long*)(A)&=(V))
 
 #define MemoryBitAt(A,V) ((*(volatile unsigned int*)(A)&=(1<<V))>>V)
+#define RT_SYS_EnInt() (MemoryOr32(SYS_CTL0_REG, 1))
 
 typedef void (*FuncPtr)(void);
 typedef void (*FuncPtr2)(unsigned long, unsigned long);
@@ -100,6 +104,7 @@ typedef void (*FuncPtr1)(unsigned long);
 #define flashWrite(value, address) {FuncPtr2 funcptr; funcptr = (FuncPtr2)0x2d8; funcptr(value, address);}
 #define flashErase(address) {unsigned long addr; FuncPtr1 funcptr; funcptr =  (FuncPtr1)0x30c; addr = (((((address>>16)&0xF)|0x1010)<<16) + (address&0xFFFF)); funcptr(addr);}
 
+#define JumpTo(address) {FuncPtr funcptr; funcptr = (FuncPtr)address; funcptr();}
 
 //extern char __mac_id;
 #define getMAC() MemoryRead32(MAC_ID)
@@ -107,5 +112,16 @@ typedef void (*FuncPtr1)(unsigned long);
 
 //void setMAC(char id);
 
+#define UART0_INT 	0x1
+#define TC0_INT		0x2
+#define TC1_INT		0x4
+#define TC2_INT		0x8
+#define EXT_INT		0x20
+#define WDT_INT		0x40
+#define UART1_INT	0x100
+#define SPI_INT		0x400
+#define RT_SYSINT_Flag()  MemoryRead(SYS_IRQ_REG)
+#define RT_SYSINT_En()  MemoryWrite(SYS_CTL0_REG, 0x1)
+#define RT_SYSINT_On(A) (MemoryRead(SYS_IRQ_REG)&A)
 #endif //__MCU_H__
 
