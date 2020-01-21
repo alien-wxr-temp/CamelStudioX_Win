@@ -13,13 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="include\M2.old\**" />
-    <EmbeddedResource Remove="include\M2.old\**" />
-    <None Remove="include\M2.old\**" />
-    <Page Remove="include\M2.old\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="blueCut.png" />
     <None Remove="CustomHighlighting.xshd" />
     <None Remove="example\M2\Hello\Hello.c" />
@@ -353,8 +346,10 @@
     <None Remove="include\M2\probe.h" />
     <None Remove="include\M2\probe_def.h" />
     <None Remove="include\M2\RTC.h" />
+    <None Remove="include\M2\SJA1000RW.h" />
     <None Remove="include\M2\SPI.h" />
     <None Remove="include\M2\stddef.h" />
+    <None Remove="include\M2\stdio.h" />
     <None Remove="include\M2\str.h" />
     <None Remove="include\M2\string.h" />
     <None Remove="include\M2\TC0.h" />
@@ -362,6 +357,7 @@
     <None Remove="include\M2\TC2.h" />
     <None Remove="include\M2\TC4.h" />
     <None Remove="include\M2\UART.h" />
+    <None Remove="include\M2\UART1.h" />
     <None Remove="include\M2\WDT.h" />
     <None Remove="include\M3\mcu.h" />
     <None Remove="include\M3\mcu.h.bak" />
@@ -386,6 +382,7 @@
     <None Remove="lib\M2\libstr.a" />
     <None Remove="lib\M2\libstring.a" />
     <None Remove="lib\M2\libUART.a" />
+    <None Remove="lib\M2\libUART1.a" />
     <None Remove="lib\M3\entry.o" />
     <None Remove="lib\M3\gdbentry.o" />
     <None Remove="lib\M3\libdsp.a" />
@@ -1386,10 +1383,16 @@
     <Content Include="include\M2\RTC.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="include\M2\SJA1000RW.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="include\M2\SPI.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="include\M2\stddef.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="include\M2\stdio.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="include\M2\str.h">
@@ -1413,13 +1416,13 @@
     <Content Include="include\M2\UART.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="include\M2\UART1.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="include\M2\WDT.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="include\M3\mcu.h">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="include\M3\mcu.h.bak">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="include\M3\MCUIO.h">
@@ -1483,6 +1486,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\M2\libUART.a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\M2\libUART1.a">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\M3\entry.o">
