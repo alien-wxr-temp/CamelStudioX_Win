@@ -30,4 +30,4 @@ Next Generation of CamelStudio on Windows
 
 ## Acknowledgements
 
-Thanks my senior [Daizhirui](https://github.com/daizhirui) for his guidance, who wrote [CamelStudioX](https://github.com/daizhirui/CamelStudioX).
+Thanks my senior [Daizhirui](https://github.com/daizhirui) for his guidance, who writes [CamelStudioX](https://github.com/daizhirui/CamelStudioX).
