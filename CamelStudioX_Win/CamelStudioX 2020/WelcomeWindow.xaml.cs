@@ -39,7 +39,7 @@ namespace CamelStudioX_2020
         {
             //create the project
             string sourceDir = @"example\M2\Hello";
-            string targetDir = pLocation.Text + pName.Text;
+            string targetDir = pLocation.Text + @"\" + pName.Text;
 
             try
             {
@@ -60,8 +60,8 @@ namespace CamelStudioX_2020
                 Console.WriteLine(copyError.Message);
             }
 
-            //launch the mainWindow
-            MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
+            //  launch the mainWindow
+            MainWindow mainWindow = new MainWindow(pName.Text, targetDir);
             mainWindow.Show();
             this.Close();
         }
@@ -78,8 +78,18 @@ namespace CamelStudioX_2020
 
         private void openProject_Click(object sender, RoutedEventArgs e)
         {
-            //launch the mainWindow
-            MainWindow mainWindow = new MainWindow(pName.Text, pLocation.Text);
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.Filters.Add(new CommonFileDialogFilter("icmsx Files", "*.icmsx"));
+            //dialog.IsFolderPicker = true;
+            string targetPath = "";
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                targetPath = dialog.FileName;
+            }
+            string pName = Path.GetFileNameWithoutExtension(targetPath);
+            string pLocation = Path.GetDirectoryName(targetPath);
+            //  launch the mainWindow
+            MainWindow mainWindow = new MainWindow(pName, pLocation);
             mainWindow.Show();
             this.Close();
         }

@@ -55,7 +55,7 @@ namespace CamelStudioX_2020
             textAreaPropertyGrid.SelectedObject = textEditor.TextArea;
             optionsPropertyGrid.SelectedObject = textEditor.Options;
 
-            string currentFileName = pLocation + pName + @"\" + pName + ".c";
+            string currentFileName = pLocation + @"\" + pName + ".c";
             textEditor.ShowLineNumbers = true;
             if (pName != "")
             {
