@@ -12,15 +12,15 @@ Next Generation of CamelStudio on Windows
 
 ### Welcome Window
 
-![Welcome Window](resources/welcomeWindow.png)
+![Welcome Window](/resources/welcomeWindow.png)
 
 ### Main Window
 
-![Main Window](resources/mainWindow.png)
+![Main Window](/resources/mainWindow.png)
 
 ### Serial Monitor
 
-![Serial Monitor](resources/serialMonitor.png)
+![Serial Monitor](/resources/serialMonitor.png)
 
 ## References
 
@@ -30,4 +30,4 @@ Next Generation of CamelStudio on Windows
 
 ## Acknowledgements
 
-Thanks my senior [Daizhirui](https://github.com/daizhirui) for his guidance, who wrote [CamelStudioX_Mac](https://github.com/daizhirui/CamelStudioX_Mac).
+Thanks my senior [Daizhirui](https://github.com/daizhirui) for his guidance, who wrote [CamelStudioX](https://github.com/daizhirui/CamelStudioX).
