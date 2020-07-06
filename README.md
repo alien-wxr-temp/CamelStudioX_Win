@@ -1,4 +1,4 @@
-# CamelStudioX_Win
+# CamelStudioX for Windows
 
 Next Generation of CamelStudio on Windows
 
