@@ -83,10 +83,7 @@ namespace CamelStudioX_2020
                     bt_send.IsEnabled = false;
                     bt_stopReceive.IsEnabled = false;
                 }
-                catch
-                {
-
-                }
+                catch { }
             }
         }
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)//读取下位机的数据，显示在textBlock中
